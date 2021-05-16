@@ -1,0 +1,10 @@
+$mainBackgroundColor: #eff1f7;
+
+$navbarHeight: 3.75rem;
+$sideBarWidth: 16.25rem;
+
+// the :export directive is the magic sauce for webpack
+// https://www.bluematador.com/blog/how-to-share-variables-between-js-and-sass
+:export {
+  sideBarWidth: $sideBarWidth;
+}

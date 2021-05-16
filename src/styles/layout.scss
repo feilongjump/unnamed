@@ -1,0 +1,50 @@
+#app {
+  .main-container {
+    min-height: 100%;
+    transition: margin-left 0.28s;
+    margin-left: $sideBarWidth;
+    position: relative;
+  }
+
+  .sidebar-container {
+    width: $sideBarWidth !important;
+    height: 100%;
+    position: fixed;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05) !important;
+
+    .sidebar-header {
+      height: $navbarHeight;
+      display: flex;
+      display: -webkit-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.45rem;
+      font-family: Menlo, ui-monospace, SFMono-Regular, Monaco, Consolas, Liberation Mono,
+        Courier New, monospace;
+      color: #409eff;
+    }
+
+    .el-menu {
+      height: calc(100% - $navbarHeight);
+      border: none;
+
+      .el-menu-item {
+        display: flex;
+        align-items: center;
+      }
+
+      & [class^='el-icon-'] {
+        margin-right: 12px;
+      }
+
+      .is-active {
+        font-weight: 700;
+      }
+    }
+  }
+
+  .app-main {
+    padding: 1rem 2.5rem;
+    background-color: $mainBackgroundColor;
+  }
+}
