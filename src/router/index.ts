@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 import Layout from '../layout/index.vue'
 import systemRoute from './modules/system'
+import basicDataRoute from './modules/BasicData'
 
 export const constantRoutes: Array<RouteRecordRaw> = [
   {
@@ -12,6 +13,7 @@ export const constantRoutes: Array<RouteRecordRaw> = [
       title: 'Dashboard'
     }
   },
+  ...basicDataRoute,
   ...systemRoute
 ]
 
