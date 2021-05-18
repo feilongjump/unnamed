@@ -1,6 +1,6 @@
 <template>
   <div class="h-full w-full">
-    <div class="w-full flex pt-4 justify-between items-center">
+    <div class="w-full flex justify-between items-center">
       <div class="flex">
         <el-dropdown trigger="click">
           <el-button class="shadow" type="primary" plain size="medium">

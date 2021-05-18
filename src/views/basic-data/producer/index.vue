@@ -1,6 +1,6 @@
 <template>
   <div class="h-full w-full">
-    <div class="w-full flex pt-4 justify-between items-center">
+    <div class="w-full flex justify-between items-center">
       <div class="flex">
         <el-dropdown trigger="click">
           <el-button class="shadow" type="primary" plain size="medium">
@@ -29,7 +29,7 @@
         <el-button class="shadow" type="primary" plain size="medium">
           <i class="el-icon-refresh mr-2"></i>Refresh
         </el-button>
-        <el-button class="shadow" type="primary" plain size="medium" @click="handleDialog(true)">
+        <el-button class="shadow" type="primary" plain size="medium" @click="jump()">
           <i class="el-icon-plus mr-2"></i>New
         </el-button>
       </div>
@@ -50,7 +50,7 @@
         <el-table-column prop="address" label="地址"></el-table-column>
         <el-table-column label="操作" width="80" align="center">
           <template #default="scope">
-            <TableActions @edit-action="handleDialog(true, scope.row.id)" />
+            <TableActions @edit-action="jump(scope.row.id)" />
           </template>
         </el-table-column>
       </el-table>
@@ -60,6 +60,7 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
+import router from '@/router'
 import TableActions from '@/componenets/Table/TableActions.vue'
 
 const keywords = ref<string>('')
@@ -79,4 +80,9 @@ const tableData = [
     address: '上海市普陀区金沙江路 1518 号'
   }
 ]
+
+const jump = (id: number = 0) => {
+  const routeName = id > 0 ? 'Producer.Edit' : 'Producer.Create'
+  router.push({ name: routeName, params: { id } })
+}
 </script>
