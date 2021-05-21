@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 import Layout from '../layout/index.vue'
 import systemRoute from './modules/system'
-import basicDataRoute from './modules/BasicData'
+import basicDataRoute from './modules/basicData'
 
 export const constantRoutes: Array<RouteRecordRaw> = [
   {
