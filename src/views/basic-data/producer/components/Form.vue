@@ -55,7 +55,8 @@ import { defineProps } from 'vue'
 const props = defineProps({
   params: {
     type: Object,
-    require: true
+    require: true,
+    default: {}
   }
 })
 

@@ -7,7 +7,7 @@
     center
     @close="handleDialog"
   >
-    <el-form :model="params" label-width="100px">
+    <el-form :model="props.params" label-width="100px">
       <el-form-item label="账户名称">
         <el-input v-model="params.name"></el-input>
       </el-form-item>
@@ -37,8 +37,20 @@
 </template>
 
 <script lang="ts" setup>
-import { defineProps, defineEmit, watch, ref, reactive } from 'vue'
+import { defineProps, defineEmit, watch, ref } from 'vue'
+
 import { ElMessage } from 'element-plus'
+
+interface BankAccountParams {
+  id: number
+  name: string
+  currency: string
+  account_name: string
+  account_number: string
+  account_bank: string
+  bank_address: string
+  company_address: string
+}
 
 const props = defineProps({
   dialogVisible: {
@@ -51,7 +63,8 @@ const props = defineProps({
   },
   params: {
     type: Object,
-    require: true
+    require: true,
+    default: <BankAccountParams>{}
   }
 })
 

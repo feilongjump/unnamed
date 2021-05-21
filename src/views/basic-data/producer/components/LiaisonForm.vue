@@ -7,7 +7,7 @@
     center
     @close="handleDialog"
   >
-    <el-form :model="params" label-width="100px">
+    <el-form :model="props.params" label-width="100px">
       <el-form-item label="联系人">
         <el-input v-model="params.liaison"></el-input>
       </el-form-item>
@@ -31,8 +31,18 @@
 </template>
 
 <script lang="ts" setup>
-import { defineProps, defineEmit, watch, ref, reactive } from 'vue'
+import { defineProps, defineEmit, watch, ref } from 'vue'
 import { ElMessage } from 'element-plus'
+
+interface LiaisonParams {
+  id: number
+  liaison: string
+  phone_number: string
+  telephone_number: string
+  fax: string
+  email: string
+  primary_contact: boolean
+}
 
 const props = defineProps({
   dialogVisible: {
@@ -45,7 +55,8 @@ const props = defineProps({
   },
   params: {
     type: Object,
-    require: true
+    require: true,
+    default: <LiaisonParams>{}
   }
 })
 
