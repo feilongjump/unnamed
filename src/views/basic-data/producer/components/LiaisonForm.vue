@@ -34,16 +34,6 @@
 import { defineProps, defineEmit, watch, ref } from 'vue'
 import { ElMessage } from 'element-plus'
 
-interface LiaisonParams {
-  id: number
-  liaison: string
-  phone_number: string
-  telephone_number: string
-  fax: string
-  email: string
-  primary_contact: boolean
-}
-
 const props = defineProps({
   dialogVisible: {
     type: Boolean,
@@ -56,7 +46,7 @@ const props = defineProps({
   params: {
     type: Object,
     require: true,
-    default: <LiaisonParams>{}
+    default: {}
   }
 })
 

@@ -33,19 +33,8 @@ import { defineProps, reactive, ref } from 'vue'
 import TableActions from '@/componenets/Table/TableActions.vue'
 import BankAccountForm from './BankAccountForm.vue'
 
-interface BankAccountParams {
-  id: number
-  name: string
-  currency: string
-  account_name: string
-  account_number: string
-  account_bank: string
-  bank_address: string
-  company_address: string
-}
-
 const params = reactive({
-  bank_account: <BankAccountParams>{}
+  bank_account: {}
 })
 
 const props = defineProps({
