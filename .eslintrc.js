@@ -18,6 +18,7 @@ module.exports = {
     'vue/no-multiple-template-root': 'off',
     'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
     'class-methods-use-this': 'off',
-    'no-param-reassign': 'off'
+    'no-param-reassign': 'off',
+    camelcase: 'off'
   }
 }
