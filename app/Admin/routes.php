@@ -13,5 +13,7 @@ Route::group([
 ], function (Router $router) {
 
     $router->get('/', 'HomeController@index');
-
+    $router->resources([
+        'tenants' => 'TenantController'
+    ]);
 });
