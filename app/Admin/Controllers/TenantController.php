@@ -20,6 +20,15 @@ class TenantController extends AdminController
         return Grid::make(new Tenant(), function (Grid $grid) {
             $grid->column('id')->sortable();
             $grid->column('name');
+
+            $grid->column('domain')
+                ->display(function () {
+                    return Tenant::domains()->first()->domain;
+                })
+                ->link(function ($value) {
+                    return "http://{$value}";
+                });
+
             $grid->column('created_at');
             $grid->column('updated_at')->sortable();
 
@@ -27,23 +36,6 @@ class TenantController extends AdminController
                 $filter->equal('id');
 
             });
-        });
-    }
-
-    /**
-     * Make a show builder.
-     *
-     * @param mixed $id
-     *
-     * @return Show
-     */
-    protected function detail($id): Show
-    {
-        return Show::make($id, new Tenant(), function (Show $show) {
-            $show->field('id');
-            $show->field('name');
-            $show->field('created_at');
-            $show->field('updated_at');
         });
     }
 
@@ -56,10 +48,17 @@ class TenantController extends AdminController
     {
         return Form::make(new Tenant(), function (Form $form) {
             $form->text('id', '标识')
-                ->rules('required|alpha|max:20|unique:tenants,id')
+                ->required()
+                ->rules('alpha|max:20|unique:tenants,id')
                 ->help('此标识用于访问地址，仅可使用英文字母');
 
-            $form->text('name')->rules('required|min:2');
+            $form->text('name')->required();
+
+            $form->hasMany('domains', function (Form\NestedForm $form) {
+                $form->text('domain', '访问地址')
+                    ->required()
+                    ->rules('alpha|max:20|unique:domains,domain');
+            });
         });
     }
 }
