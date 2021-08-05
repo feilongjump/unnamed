@@ -26,5 +26,19 @@ use Dcat\Admin\Show;
  */
 
 Grid::resolving(function (Grid $grid) {
+    // 表格分隔展示方式
     $grid->tableCollapse(false);
+
+    // 关闭表格行显示按钮
+    $grid->disableViewButton();
+});
+
+Form::resolving(function (Form $form) {
+    // 关闭表单工具栏的默认按钮
+    $form->disableViewButton();
+
+    // 关闭表单底部元素
+    $form->disableViewCheck();
+    $form->disableEditingCheck();
+    $form->disableCreatingCheck();
 });
