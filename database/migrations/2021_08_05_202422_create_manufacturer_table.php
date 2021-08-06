@@ -20,7 +20,7 @@ class CreateManufacturerTable extends Migration
             $table->string('category')->default('')->comment('厂家分类');
             $table->bigInteger('purchaser')->comment('采购负责人');
             $table->string('address')->default('')->comment('厂家地址');
-            $table->string('remarks')->default('')->comment('备注');
+            $table->text('remarks')->nullable()->comment('备注');
             $table->timestamps();
             $table->softDeletes();
         });
@@ -33,6 +33,6 @@ class CreateManufacturerTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('manufacturer');
+        Schema::dropIfExists('manufacturers');
     }
 }
