@@ -13,4 +13,12 @@ class ManufacturerContact extends Model
 
     protected $table = 'manufacturer_contacts';
 
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'name', 'telephone', 'email', 'fax', 'is_default'
+    ];
 }

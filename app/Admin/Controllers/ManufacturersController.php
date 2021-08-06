@@ -2,11 +2,10 @@
 
 namespace App\Admin\Controllers;
 
-use App\Models\Manufacturer;
 use Dcat\Admin\Form;
 use Dcat\Admin\Grid;
+use App\Models\Manufacturer;
 use Dcat\Admin\Http\Controllers\AdminController;
-use Dcat\Admin\Show;
 
 class ManufacturersController extends AdminController
 {
@@ -15,7 +14,7 @@ class ManufacturersController extends AdminController
      *
      * @return Grid
      */
-    protected function grid()
+    protected function grid(): Grid
     {
         return Grid::make(new Manufacturer(), function (Grid $grid) {
             $grid->column('id')->sortable();
@@ -36,35 +35,13 @@ class ManufacturersController extends AdminController
     }
 
     /**
-     * Make a show builder.
-     *
-     * @param mixed $id
-     *
-     * @return Show
-     */
-    protected function detail($id)
-    {
-        return Show::make($id, new Manufacturer(), function (Show $show) {
-            $show->field('id');
-            $show->field('code');
-            $show->field('name');
-            $show->field('category');
-            $show->field('purchaser');
-            $show->field('address');
-            $show->field('remarks');
-            $show->field('created_at');
-            $show->field('updated_at');
-        });
-    }
-
-    /**
      * Make a form builder.
      *
      * @return Form
      */
-    protected function form()
+    protected function form(): Form
     {
-        return Form::make(new Manufacturer(), function (Form $form) {
+        return Form::make(Manufacturer::with(['contacts', 'banks']), function (Form $form) {
             $form->tab('厂家信息', function (Form $form) {
                 $form->display('id');
                 $form->text('code')->required();
@@ -84,13 +61,15 @@ class ManufacturersController extends AdminController
 
                 $form->hasMany('contacts', '', function (Form\NestedForm $form) {
 
+                    // TODO: 等待此回复 https://github.com/jqhph/dcat-admin/issues/1417
+                    // 关联时需要自动翻译，使用以下模式
+                    // $form->text('contacts.name')->required();
+                    // 同时在主翻译文件中，增加翻译字段 https://github.com/jqhph/dcat-admin/issues/229
                     $form->text('name')->required();
                     $form->text('telephone')->required();
                     $form->email('email')->required();
                     $form->text('fax')->required();
-                    $form->checkbox('is_default')
-                        ->options([1 => '是'])
-                        ->required();
+                    $form->switch('is_default')->default(false);
 
                     $form->display('created_at');
                     $form->display('updated_at');

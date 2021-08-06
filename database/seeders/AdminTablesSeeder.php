@@ -20,76 +20,100 @@ class AdminTablesSeeder extends Seeder
         Models\Menu::insert(
             [
                 [
-                    "created_at" => "2021-08-05 17:32:50",
-                    "extension" => "",
-                    "icon" => "feather icon-bar-chart-2",
                     "id" => 1,
+                    "parent_id" => 0,
                     "order" => 1,
-                    "parent_id" => 0,
-                    "show" => 1,
                     "title" => "主页",
-                    "updated_at" => NULL,
-                    "uri" => "/"
+                    "icon" => "feather icon-bar-chart-2",
+                    "uri" => "/",
+                    "extension" => "",
+                    "show" => 1,
+                    "created_at" => "2021-08-05 17:32:50",
+                    "updated_at" => NULL
                 ],
                 [
-                    "created_at" => "2021-08-05 17:32:50",
-                    "extension" => "",
-                    "icon" => "feather icon-settings",
                     "id" => 2,
-                    "order" => 2,
                     "parent_id" => 0,
-                    "show" => 1,
+                    "order" => 2,
                     "title" => "系统管理",
-                    "updated_at" => NULL,
-                    "uri" => ""
+                    "icon" => "feather icon-settings",
+                    "uri" => "",
+                    "extension" => "",
+                    "show" => 1,
+                    "created_at" => "2021-08-05 17:32:50",
+                    "updated_at" => NULL
                 ],
                 [
-                    "created_at" => "2021-08-05 17:32:50",
-                    "extension" => "",
-                    "icon" => "",
                     "id" => 3,
+                    "parent_id" => 2,
                     "order" => 3,
-                    "parent_id" => 2,
-                    "show" => 1,
                     "title" => "管理员",
-                    "updated_at" => NULL,
-                    "uri" => "auth/users"
+                    "icon" => "",
+                    "uri" => "auth/users",
+                    "extension" => "",
+                    "show" => 1,
+                    "created_at" => "2021-08-05 17:32:50",
+                    "updated_at" => NULL
                 ],
                 [
-                    "created_at" => "2021-08-05 17:32:50",
-                    "extension" => "",
-                    "icon" => "",
                     "id" => 4,
+                    "parent_id" => 2,
                     "order" => 4,
-                    "parent_id" => 2,
-                    "show" => 1,
                     "title" => "角色",
-                    "updated_at" => NULL,
-                    "uri" => "auth/roles"
+                    "icon" => "",
+                    "uri" => "auth/roles",
+                    "extension" => "",
+                    "show" => 1,
+                    "created_at" => "2021-08-05 17:32:50",
+                    "updated_at" => NULL
                 ],
                 [
-                    "created_at" => "2021-08-05 17:32:50",
-                    "extension" => "",
-                    "icon" => "",
                     "id" => 5,
-                    "order" => 5,
                     "parent_id" => 2,
-                    "show" => 1,
+                    "order" => 5,
                     "title" => "权限",
-                    "updated_at" => NULL,
-                    "uri" => "auth/permissions"
+                    "icon" => "",
+                    "uri" => "auth/permissions",
+                    "extension" => "",
+                    "show" => 1,
+                    "created_at" => "2021-08-05 17:32:50",
+                    "updated_at" => NULL
                 ],
                 [
-                    "created_at" => "2021-08-05 17:32:50",
-                    "extension" => "",
-                    "icon" => "",
                     "id" => 6,
-                    "order" => 6,
                     "parent_id" => 2,
-                    "show" => 1,
+                    "order" => 6,
                     "title" => "菜单",
-                    "updated_at" => NULL,
-                    "uri" => "auth/menu"
+                    "icon" => "",
+                    "uri" => "auth/menu",
+                    "extension" => "",
+                    "show" => 1,
+                    "created_at" => "2021-08-05 17:32:50",
+                    "updated_at" => NULL
+                ],
+                [
+                    "id" => 7,
+                    "parent_id" => 0,
+                    "order" => 7,
+                    "title" => "基础数据",
+                    "icon" => "fa-bars",
+                    "uri" => NULL,
+                    "extension" => "",
+                    "show" => 1,
+                    "created_at" => "2021-08-06 10:00:00",
+                    "updated_at" => "2021-08-06 10:01:46"
+                ],
+                [
+                    "id" => 8,
+                    "parent_id" => 7,
+                    "order" => 8,
+                    "title" => "厂家管理",
+                    "icon" => NULL,
+                    "uri" => "manufacturers",
+                    "extension" => "",
+                    "show" => 1,
+                    "created_at" => "2021-08-06 10:01:27",
+                    "updated_at" => "2021-08-06 10:01:27"
                 ]
             ]
         );
@@ -98,69 +122,69 @@ class AdminTablesSeeder extends Seeder
         Models\Permission::insert(
             [
                 [
-                    "created_at" => "2021-08-05 17:32:50",
-                    "http_method" => "",
-                    "http_path" => "",
                     "id" => 1,
                     "name" => "Auth management",
+                    "slug" => "auth-management",
+                    "http_method" => "",
+                    "http_path" => "",
                     "order" => 1,
                     "parent_id" => 0,
-                    "slug" => "auth-management",
+                    "created_at" => "2021-08-05 17:32:50",
                     "updated_at" => NULL
                 ],
                 [
-                    "created_at" => "2021-08-05 17:32:50",
-                    "http_method" => "",
-                    "http_path" => "/auth/users*",
                     "id" => 2,
                     "name" => "Users",
+                    "slug" => "users",
+                    "http_method" => "",
+                    "http_path" => "/auth/users*",
                     "order" => 2,
                     "parent_id" => 1,
-                    "slug" => "users",
+                    "created_at" => "2021-08-05 17:32:50",
                     "updated_at" => NULL
                 ],
                 [
-                    "created_at" => "2021-08-05 17:32:50",
-                    "http_method" => "",
-                    "http_path" => "/auth/roles*",
                     "id" => 3,
                     "name" => "Roles",
+                    "slug" => "roles",
+                    "http_method" => "",
+                    "http_path" => "/auth/roles*",
                     "order" => 3,
                     "parent_id" => 1,
-                    "slug" => "roles",
+                    "created_at" => "2021-08-05 17:32:50",
                     "updated_at" => NULL
                 ],
                 [
-                    "created_at" => "2021-08-05 17:32:50",
-                    "http_method" => "",
-                    "http_path" => "/auth/permissions*",
                     "id" => 4,
                     "name" => "Permissions",
+                    "slug" => "permissions",
+                    "http_method" => "",
+                    "http_path" => "/auth/permissions*",
                     "order" => 4,
                     "parent_id" => 1,
-                    "slug" => "permissions",
+                    "created_at" => "2021-08-05 17:32:50",
                     "updated_at" => NULL
                 ],
                 [
-                    "created_at" => "2021-08-05 17:32:50",
-                    "http_method" => "",
-                    "http_path" => "/auth/menu*",
                     "id" => 5,
                     "name" => "Menu",
+                    "slug" => "menu",
+                    "http_method" => "",
+                    "http_path" => "/auth/menu*",
                     "order" => 5,
                     "parent_id" => 1,
-                    "slug" => "menu",
+                    "created_at" => "2021-08-05 17:32:50",
                     "updated_at" => NULL
                 ],
                 [
-                    "created_at" => "2021-08-05 17:32:50",
-                    "http_method" => "",
-                    "http_path" => "/auth/extensions*",
                     "id" => 6,
                     "name" => "Extension",
+                    "slug" => "extension",
+                    "http_method" => "",
+                    "http_path" => "/auth/extensions*",
                     "order" => 6,
                     "parent_id" => 1,
-                    "slug" => "extension",
+                    "created_at" => "2021-08-05 17:32:50",
                     "updated_at" => NULL
                 ]
             ]
@@ -170,10 +194,10 @@ class AdminTablesSeeder extends Seeder
         Models\Role::insert(
             [
                 [
-                    "created_at" => "2021-08-05 17:32:50",
                     "id" => 1,
                     "name" => "Administrator",
                     "slug" => "administrator",
+                    "created_at" => "2021-08-05 17:32:50",
                     "updated_at" => "2021-08-05 17:32:50"
                 ]
             ]
