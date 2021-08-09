@@ -114,6 +114,18 @@ class AdminTablesSeeder extends Seeder
                     "show" => 1,
                     "created_at" => "2021-08-06 10:01:27",
                     "updated_at" => "2021-08-06 10:01:27"
+                ],
+                [
+                    "id" => 9,
+                    "parent_id" => 7,
+                    "order" => 9,
+                    "title" => "客户管理",
+                    "icon" => NULL,
+                    "uri" => "customers",
+                    "extension" => "",
+                    "show" => 1,
+                    "created_at" => "2021-08-09 16:28:57",
+                    "updated_at" => "2021-08-09 16:28:57"
                 ]
             ]
         );
@@ -213,14 +225,30 @@ class AdminTablesSeeder extends Seeder
 		Models\Extension::truncate();
 		Models\Extension::insert(
 			[
-
+                [
+                    "id" => 1,
+                    "name" => "dcat-admin.form-step",
+                    "version" => "1.0.0",
+                    "is_enabled" => 1,
+                    "options" => NULL,
+                    "created_at" => "2021-08-09 16:29:08",
+                    "updated_at" => "2021-08-09 16:29:10"
+                ]
             ]
 		);
 
 		Models\ExtensionHistory::truncate();
 		Models\ExtensionHistory::insert(
 			[
-
+                [
+                    "id" => 1,
+                    "name" => "dcat-admin.form-step",
+                    "type" => 1,
+                    "version" => "1.0.0",
+                    "detail" => "Initialize extension.",
+                    "created_at" => "2021-08-09 16:29:08",
+                    "updated_at" => "2021-08-09 16:29:08"
+                ]
             ]
 		);
 
