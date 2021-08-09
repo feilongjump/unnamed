@@ -64,6 +64,9 @@ namespace Dcat\Admin {
      * @property Grid\Column|Collection manufacturer_id
      * @property Grid\Column|Collection code
      * @property Grid\Column|Collection purchaser
+     * @property Grid\Column|Collection spec
+     * @property Grid\Column|Collection unit
+     * @property Grid\Column|Collection unit_price
      * @property Grid\Column|Collection token
      * @property Grid\Column|Collection email_verified_at
      *
@@ -120,6 +123,9 @@ namespace Dcat\Admin {
      * @method Grid\Column|Collection manufacturer_id(string $label = null)
      * @method Grid\Column|Collection code(string $label = null)
      * @method Grid\Column|Collection purchaser(string $label = null)
+     * @method Grid\Column|Collection spec(string $label = null)
+     * @method Grid\Column|Collection unit(string $label = null)
+     * @method Grid\Column|Collection unit_price(string $label = null)
      * @method Grid\Column|Collection token(string $label = null)
      * @method Grid\Column|Collection email_verified_at(string $label = null)
      */
@@ -181,6 +187,9 @@ namespace Dcat\Admin {
      * @property Show\Field|Collection manufacturer_id
      * @property Show\Field|Collection code
      * @property Show\Field|Collection purchaser
+     * @property Show\Field|Collection spec
+     * @property Show\Field|Collection unit
+     * @property Show\Field|Collection unit_price
      * @property Show\Field|Collection token
      * @property Show\Field|Collection email_verified_at
      *
@@ -237,6 +246,9 @@ namespace Dcat\Admin {
      * @method Show\Field|Collection manufacturer_id(string $label = null)
      * @method Show\Field|Collection code(string $label = null)
      * @method Show\Field|Collection purchaser(string $label = null)
+     * @method Show\Field|Collection spec(string $label = null)
+     * @method Show\Field|Collection unit(string $label = null)
+     * @method Show\Field|Collection unit_price(string $label = null)
      * @method Show\Field|Collection token(string $label = null)
      * @method Show\Field|Collection email_verified_at(string $label = null)
      */

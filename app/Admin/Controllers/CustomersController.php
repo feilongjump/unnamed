@@ -41,31 +41,6 @@ class CustomersController extends AdminController
     }
 
     /**
-     * Make a show builder.
-     *
-     * @param mixed $id
-     *
-     * @return Show
-     */
-    protected function detail($id)
-    {
-        return Show::make($id, new Customer(), function (Show $show) {
-            $show->field('id');
-            $show->field('name');
-            $show->field('category');
-            $show->field('salesman_id');
-            $show->field('merchandiser_id');
-            $show->field('grade');
-            $show->field('currency');
-            $show->field('payment_method');
-            $show->field('address');
-            $show->field('remarks');
-            $show->field('created_at');
-            $show->field('updated_at');
-        });
-    }
-
-    /**
      * Make a form builder.
      *
      * @return Form

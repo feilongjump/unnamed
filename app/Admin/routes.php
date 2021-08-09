@@ -16,5 +16,18 @@ Route::group([
 
     $router->resource('manufacturers', 'ManufacturersController');
     $router->resource('customers', 'CustomersController');
+    $router->resource('materials', 'MaterialsController');
 
+    /**
+     * API
+     */
+    $router->group([
+        'prefix'     => config('admin.route.api_prefix'),
+        'namespace'  => config('admin.route.api_namespace'),
+        'middleware' => config('admin.route.api_middleware'),
+    ], function (Router $router) {
+
+        $router->get('manufacturers', 'ManufacturersController@index');
+
+    });
 });
