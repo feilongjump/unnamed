@@ -15,7 +15,7 @@ class CreateManufacturerContactsTable extends Migration
     {
         Schema::create('manufacturer_contacts', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('manufacturer_id')->default('');
+            $table->unsignedInteger('manufacturer_id');
             $table->string('name')->default('')->comment('姓名');
             $table->string('telephone')->default('')->comment('电话');
             $table->string('email')->default('')->comment('E-mail');

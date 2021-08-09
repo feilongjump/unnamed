@@ -15,7 +15,7 @@ class CreateManufacturerBanksTable extends Migration
     {
         Schema::create('manufacturer_banks', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('manufacturer_id')->default('');
+            $table->unsignedInteger('manufacturer_id');
             $table->string('name')->default('')->comment('账户名称');
             $table->string('currency')->default('')->comment('币种');
             $table->string('account_name')->default('')->comment('开户名');
