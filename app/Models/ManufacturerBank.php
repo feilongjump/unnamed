@@ -11,8 +11,6 @@ class ManufacturerBank extends Model
 	use HasDateTimeFormatter;
     use SoftDeletes;
 
-    protected $table = 'manufacturer_banks';
-
     /**
      * The attributes that are mass assignable.
      *

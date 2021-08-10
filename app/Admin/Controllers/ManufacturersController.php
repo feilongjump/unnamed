@@ -78,6 +78,7 @@ class ManufacturersController extends AdminController
                     $this->banks($step);
 
                 })
+                ->width('100%')
                 ->done();
         });
     }

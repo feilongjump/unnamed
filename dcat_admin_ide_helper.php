@@ -67,7 +67,26 @@ namespace Dcat\Admin {
      * @property Grid\Column|Collection spec
      * @property Grid\Column|Collection unit
      * @property Grid\Column|Collection unit_price
+     * @property Grid\Column|Collection showpiece_id
+     * @property Grid\Column|Collection art_no
+     * @property Grid\Column|Collection rate
+     * @property Grid\Column|Collection cbm
+     * @property Grid\Column|Collection quantity
+     * @property Grid\Column|Collection price_formula
+     * @property Grid\Column|Collection ratio
      * @property Grid\Column|Collection token
+     * @property Grid\Column|Collection relevance_id
+     * @property Grid\Column|Collection path
+     * @property Grid\Column|Collection mo
+     * @property Grid\Column|Collection english_name
+     * @property Grid\Column|Collection series
+     * @property Grid\Column|Collection material
+     * @property Grid\Column|Collection producer
+     * @property Grid\Column|Collection quoted_price
+     * @property Grid\Column|Collection describe
+     * @property Grid\Column|Collection english_describe
+     * @property Grid\Column|Collection pack_describe
+     * @property Grid\Column|Collection english_pack_describe
      * @property Grid\Column|Collection email_verified_at
      *
      * @method Grid\Column|Collection id(string $label = null)
@@ -126,7 +145,26 @@ namespace Dcat\Admin {
      * @method Grid\Column|Collection spec(string $label = null)
      * @method Grid\Column|Collection unit(string $label = null)
      * @method Grid\Column|Collection unit_price(string $label = null)
+     * @method Grid\Column|Collection showpiece_id(string $label = null)
+     * @method Grid\Column|Collection art_no(string $label = null)
+     * @method Grid\Column|Collection rate(string $label = null)
+     * @method Grid\Column|Collection cbm(string $label = null)
+     * @method Grid\Column|Collection quantity(string $label = null)
+     * @method Grid\Column|Collection price_formula(string $label = null)
+     * @method Grid\Column|Collection ratio(string $label = null)
      * @method Grid\Column|Collection token(string $label = null)
+     * @method Grid\Column|Collection relevance_id(string $label = null)
+     * @method Grid\Column|Collection path(string $label = null)
+     * @method Grid\Column|Collection mo(string $label = null)
+     * @method Grid\Column|Collection english_name(string $label = null)
+     * @method Grid\Column|Collection series(string $label = null)
+     * @method Grid\Column|Collection material(string $label = null)
+     * @method Grid\Column|Collection producer(string $label = null)
+     * @method Grid\Column|Collection quoted_price(string $label = null)
+     * @method Grid\Column|Collection describe(string $label = null)
+     * @method Grid\Column|Collection english_describe(string $label = null)
+     * @method Grid\Column|Collection pack_describe(string $label = null)
+     * @method Grid\Column|Collection english_pack_describe(string $label = null)
      * @method Grid\Column|Collection email_verified_at(string $label = null)
      */
     class Grid {}
@@ -190,7 +228,26 @@ namespace Dcat\Admin {
      * @property Show\Field|Collection spec
      * @property Show\Field|Collection unit
      * @property Show\Field|Collection unit_price
+     * @property Show\Field|Collection showpiece_id
+     * @property Show\Field|Collection art_no
+     * @property Show\Field|Collection rate
+     * @property Show\Field|Collection cbm
+     * @property Show\Field|Collection quantity
+     * @property Show\Field|Collection price_formula
+     * @property Show\Field|Collection ratio
      * @property Show\Field|Collection token
+     * @property Show\Field|Collection relevance_id
+     * @property Show\Field|Collection path
+     * @property Show\Field|Collection mo
+     * @property Show\Field|Collection english_name
+     * @property Show\Field|Collection series
+     * @property Show\Field|Collection material
+     * @property Show\Field|Collection producer
+     * @property Show\Field|Collection quoted_price
+     * @property Show\Field|Collection describe
+     * @property Show\Field|Collection english_describe
+     * @property Show\Field|Collection pack_describe
+     * @property Show\Field|Collection english_pack_describe
      * @property Show\Field|Collection email_verified_at
      *
      * @method Show\Field|Collection id(string $label = null)
@@ -249,7 +306,26 @@ namespace Dcat\Admin {
      * @method Show\Field|Collection spec(string $label = null)
      * @method Show\Field|Collection unit(string $label = null)
      * @method Show\Field|Collection unit_price(string $label = null)
+     * @method Show\Field|Collection showpiece_id(string $label = null)
+     * @method Show\Field|Collection art_no(string $label = null)
+     * @method Show\Field|Collection rate(string $label = null)
+     * @method Show\Field|Collection cbm(string $label = null)
+     * @method Show\Field|Collection quantity(string $label = null)
+     * @method Show\Field|Collection price_formula(string $label = null)
+     * @method Show\Field|Collection ratio(string $label = null)
      * @method Show\Field|Collection token(string $label = null)
+     * @method Show\Field|Collection relevance_id(string $label = null)
+     * @method Show\Field|Collection path(string $label = null)
+     * @method Show\Field|Collection mo(string $label = null)
+     * @method Show\Field|Collection english_name(string $label = null)
+     * @method Show\Field|Collection series(string $label = null)
+     * @method Show\Field|Collection material(string $label = null)
+     * @method Show\Field|Collection producer(string $label = null)
+     * @method Show\Field|Collection quoted_price(string $label = null)
+     * @method Show\Field|Collection describe(string $label = null)
+     * @method Show\Field|Collection english_describe(string $label = null)
+     * @method Show\Field|Collection pack_describe(string $label = null)
+     * @method Show\Field|Collection english_pack_describe(string $label = null)
      * @method Show\Field|Collection email_verified_at(string $label = null)
      */
     class Show {}

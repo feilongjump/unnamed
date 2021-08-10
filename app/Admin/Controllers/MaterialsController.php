@@ -2,11 +2,9 @@
 
 namespace App\Admin\Controllers;
 
-use App\Models\Manufacturer;
 use App\Models\Material;
 use Dcat\Admin\Form;
 use Dcat\Admin\Grid;
-use Dcat\Admin\Show;
 use Dcat\Admin\Http\Controllers\AdminController;
 
 class MaterialsController extends AdminController

@@ -12,8 +12,6 @@ class Manufacturer extends Model
 	use HasDateTimeFormatter;
     use SoftDeletes;
 
-    protected $table = 'manufacturers';
-
     /**
      * 联系人
      *

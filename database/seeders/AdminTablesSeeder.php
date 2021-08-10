@@ -126,6 +126,30 @@ class AdminTablesSeeder extends Seeder
                     "show" => 1,
                     "created_at" => "2021-08-09 16:28:57",
                     "updated_at" => "2021-08-09 16:28:57"
+                ],
+                [
+                    "id" => 10,
+                    "parent_id" => 7,
+                    "order" => 10,
+                    "title" => "物料管理",
+                    "icon" => NULL,
+                    "uri" => "materials",
+                    "extension" => "",
+                    "show" => 1,
+                    "created_at" => "2021-08-09 16:56:13",
+                    "updated_at" => "2021-08-09 16:56:13"
+                ],
+                [
+                    "id" => 11,
+                    "parent_id" => 7,
+                    "order" => 11,
+                    "title" => "样品档案",
+                    "icon" => NULL,
+                    "uri" => "showpieces",
+                    "extension" => "",
+                    "show" => 1,
+                    "created_at" => "2021-08-10 14:35:26",
+                    "updated_at" => "2021-08-10 14:35:26"
                 ]
             ]
         );

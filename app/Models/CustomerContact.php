@@ -10,8 +10,6 @@ class CustomerContact extends Model
 {
 	use HasDateTimeFormatter;
 
-    protected $table = 'customer_contacts';
-
     /**
      * The attributes that are mass assignable.
      *

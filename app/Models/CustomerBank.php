@@ -11,8 +11,6 @@ class CustomerBank extends Model
 	use HasDateTimeFormatter;
     use SoftDeletes;
 
-    protected $table = 'customer_banks';
-
     /**
      * The attributes that are mass assignable.
      *

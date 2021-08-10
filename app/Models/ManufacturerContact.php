@@ -11,8 +11,6 @@ class ManufacturerContact extends Model
 	use HasDateTimeFormatter;
     use SoftDeletes;
 
-    protected $table = 'manufacturer_contacts';
-
     /**
      * The attributes that are mass assignable.
      *

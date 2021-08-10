@@ -84,6 +84,7 @@ class CustomersController extends AdminController
                     $this->banks($step);
 
                 })
+                ->width('100%')
                 ->done();
         });
     }
