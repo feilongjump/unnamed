@@ -59,7 +59,7 @@ class MaterialsController extends AdminController
                 ->required();
             $form->text('unit');
             $form->text('unit_price');
-            $form->text('remarks');
+            $form->textarea('remarks')->rows(10);
 
             $form->display('created_at');
             $form->display('updated_at');
