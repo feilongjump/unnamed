@@ -21,7 +21,7 @@ class CreatePartsTable extends Migration
             $table->string('code')->default('')->comment('编号');
             $table->string('name')->default('')->comment('名称');
             $table->string('spec')->default('')->comment('规格');
-            $table->string('rate')->default('')->comment('配比');
+            $table->unsignedDecimal('rate', 5)->default(0.00)->comment('配比');
             $table->unsignedInteger('quantity')->default(0)->comment('数量');
             $table->unsignedDecimal('unit_price', 10)->default(0.00)->comment('单价');
             $table->unsignedDecimal('cost_price', 10)->default(0.00)->comment('成本价');

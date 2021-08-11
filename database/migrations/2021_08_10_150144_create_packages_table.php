@@ -21,7 +21,7 @@ class CreatePackagesTable extends Migration
             $table->string('type')->default('')->comment('类型');
             $table->string('name')->default('')->comment('名称');
             $table->string('spec')->default('')->comment('规格');
-            $table->string('rate')->default('')->comment('包装率');
+            $table->unsignedDecimal('rate', 5)->default(0.00)->comment('包装率');
             $table->string('cbm')->default('')->comment('CBM');
             $table->unsignedInteger('quantity')->default(0)->comment('数量');
             $table->unsignedDecimal('unit_price', 10)->default(0.00)->comment('单价');

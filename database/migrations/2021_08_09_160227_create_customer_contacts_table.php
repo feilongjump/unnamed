@@ -22,6 +22,7 @@ class CreateCustomerContactsTable extends Migration
             $table->string('fax')->default('')->comment('传真');
             $table->tinyInteger('is_default')->default(false)->comment('默认联系人');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

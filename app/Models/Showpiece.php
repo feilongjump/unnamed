@@ -2,16 +2,10 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
-use Dcat\Admin\Traits\HasDateTimeFormatter;
-use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Showpiece extends Model
 {
-	use HasDateTimeFormatter;
-    use SoftDeletes;
-
     /**
      * 配件信息
      *

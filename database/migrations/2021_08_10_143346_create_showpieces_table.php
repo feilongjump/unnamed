@@ -24,8 +24,8 @@ class CreateShowpiecesTable extends Migration
             $table->string('series')->default('')->comment('系列');
             $table->string('material')->default('')->comment('材料');
             $table->unsignedDecimal('unit_price', 10)->default(0.00)->comment('单价');
-            $table->string('producer')->default('')->comment('生产商');
             $table->unsignedDecimal('quoted_price', 10)->default(0.00)->comment('报价');
+            $table->unsignedDecimal('tax_rebate_rate', 10)->default(0.00)->comment('退税率');
             $table->string('describe')->default('')->comment('样品名描述');
             $table->string('english_describe')->default('')->comment('样品名描述『英文』');
             $table->string('pack_describe')->default('')->comment('包装描述');
