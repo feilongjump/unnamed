@@ -22,9 +22,9 @@ class CustomerContactFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => $this->faker->name,
+            'name'      => $this->faker->name,
             'telephone' => $this->faker->phoneNumber,
-            'email' => $this->faker->email,
+            'email'     => $this->faker->email,
         ];
     }
 }

@@ -22,12 +22,12 @@ class ManufacturerBankFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => $this->faker->name,
-            'currency' => $this->faker->currencyCode,
-            'account_name' => $this->faker->name,
-            'account_number' => $this->faker->creditCardNumber,
-            'account_bank' => $this->faker->creditCardType,
-            'bank_address' => $this->faker->address,
+            'name'            => $this->faker->name,
+            'currency'        => $this->faker->currencyCode,
+            'account_name'    => $this->faker->name,
+            'account_number'  => $this->faker->creditCardNumber,
+            'account_bank'    => $this->faker->creditCardType,
+            'bank_address'    => $this->faker->address,
             'company_address' => $this->faker->address,
         ];
     }

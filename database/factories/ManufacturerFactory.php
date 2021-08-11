@@ -22,11 +22,11 @@ class ManufacturerFactory extends Factory
     public function definition(): array
     {
         return [
-            'no' => $this->faker->bothify('?????-#####'),
-            'name' => $this->faker->word,
+            'no'       => $this->faker->bothify('?????-#####'),
+            'name'     => $this->faker->word,
             'category' => $this->faker->word,
-            'address' => $this->faker->address,
-            'remarks' => $this->faker->realText(),
+            'address'  => $this->faker->address,
+            'remarks'  => $this->faker->realText(),
         ];
     }
 }

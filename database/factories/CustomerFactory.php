@@ -22,13 +22,13 @@ class CustomerFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => $this->faker->company . $this->faker->companySuffix,
-            'category' => $this->faker->word,
-            'grade' => $this->faker->numberBetween(1, 5),
-            'currency' => $this->faker->currencyCode,
+            'name'           => $this->faker->company . $this->faker->companySuffix,
+            'category'       => $this->faker->word,
+            'grade'          => $this->faker->numberBetween(1, 5),
+            'currency'       => $this->faker->currencyCode,
             'payment_method' => $this->faker->creditCardType,
-            'address' => $this->faker->address,
-            'remarks' => $this->faker->realText(),
+            'address'        => $this->faker->address,
+            'remarks'        => $this->faker->realText(),
         ];
     }
 }

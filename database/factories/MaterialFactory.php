@@ -23,13 +23,13 @@ class MaterialFactory extends Factory
     {
         return [
             'manufacturer_id' => $this->faker->randomDigitNotNull,
-            'no' => $this->faker->bothify('?????-#####'),
-            'name' => $this->faker->name,
-            'spec' => $this->faker->word,
-            'category' => $this->faker->word,
-            'unit' => $this->faker->word,
-            'unit_price' => $this->faker->randomFloat(2, 1, 99999),
-            'remarks' => $this->faker->realText(),
+            'no'              => $this->faker->bothify('?????-#####'),
+            'name'            => $this->faker->name,
+            'spec'            => $this->faker->word,
+            'category'        => $this->faker->word,
+            'unit'            => $this->faker->word,
+            'unit_price'      => $this->faker->randomFloat(2, 1, 99999),
+            'remarks'         => $this->faker->realText(),
         ];
     }
 }

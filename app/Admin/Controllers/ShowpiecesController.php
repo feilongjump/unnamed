@@ -140,7 +140,7 @@ class ShowpiecesController extends AdminController
      *
      * @param $form
      */
-    private function packages( $form)
+    private function packages($form)
     {
         $form->hasMany('packages', '', function (Form\NestedForm $form) {
 
