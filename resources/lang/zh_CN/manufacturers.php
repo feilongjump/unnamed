@@ -5,7 +5,7 @@ return [
         'manufacturers' => '厂家',
     ],
     'fields'  => [
-        'code'      => '厂家编号',
+        'no'        => '厂家编号',
         'name'      => '厂家名称',
         'category'  => '厂家分类',
         'purchaser' => '采购负责人',

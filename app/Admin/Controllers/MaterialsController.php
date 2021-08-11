@@ -19,7 +19,7 @@ class MaterialsController extends AdminController
         return Grid::make(new Material(), function (Grid $grid) {
             $grid->column('id')->sortable();
             $grid->column('manufacturer_id');
-            $grid->column('code');
+            $grid->column('no');
             $grid->column('name');
             $grid->column('spec');
             $grid->column('category');
@@ -49,7 +49,7 @@ class MaterialsController extends AdminController
             $form->select('manufacturer_id')
                 ->ajax('api/manufacturers')
                 ->required();
-            $form->text('code')->required();
+            $form->text('no')->required();
             $form->text('name')->required();
             $form->text('spec');
             $form->text('category')

@@ -5,9 +5,7 @@ namespace App\Admin\Controllers;
 use App\Models\Showpiece;
 use Dcat\Admin\Form;
 use Dcat\Admin\Grid;
-use Dcat\Admin\Show;
 use Dcat\Admin\Http\Controllers\AdminController;
-use Illuminate\Database\Eloquent\Model;
 
 class ShowpiecesController extends AdminController
 {
@@ -22,7 +20,7 @@ class ShowpiecesController extends AdminController
             $grid->column('id')->sortable();
             $grid->column('manufacturer_id');
             $grid->column('mo');
-            $grid->column('code');
+            $grid->column('no');
             $grid->column('name');
             $grid->column('english_name');
             $grid->column('spec');
@@ -121,7 +119,7 @@ class ShowpiecesController extends AdminController
             ->ajax('api/manufacturers')
             ->required();
         $form->text('mo')->required();
-        $form->text('code')->required();
+        $form->text('no')->required();
         $form->text('name')->required();
         $form->text('english_name')->required();
         $form->text('spec')->required();
@@ -175,7 +173,7 @@ class ShowpiecesController extends AdminController
 
             $form->text('manufacturer_id')->required();
             $form->text('art_no')->required();
-            $form->text('code')->required();
+            $form->text('no')->required();
             $form->text('name')->required();
             $form->text('spec')->required();
             $form->rate('rate')->required();

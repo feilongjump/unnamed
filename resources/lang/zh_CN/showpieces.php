@@ -7,7 +7,7 @@ return [
     'fields'  => [
         'manufacturer_id'       => '厂家',
         'mo'                    => 'MO',
-        'code'                  => '编号',
+        'no'                    => '编号',
         'name'                  => '产品名',
         'english_name'          => '产品名『英文』',
         'spec'                  => '规格',
@@ -39,7 +39,7 @@ return [
             'showpiece_id'    => 'showpiece_id',
             'manufacturer_id' => '厂家',
             'art_no'          => '货号',
-            'code'            => '编号',
+            'no'              => '编号',
             'name'            => '名称',
             'spec'            => '规格',
             'rate'            => '配比',

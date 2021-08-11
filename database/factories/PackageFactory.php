@@ -27,11 +27,11 @@ class PackageFactory extends Factory
             'type' => $this->faker->word,
             'name' => $this->faker->word,
             'spec' => $this->faker->word,
-            'rate' => $this->faker->randomFloat(2, 100, 0),
+            'rate' => $this->faker->randomFloat(2, 0, 100),
             'cbm' => $this->faker->word,
             'quantity' => $this->faker->randomNumber(),
-            'unit_price' => $this->faker->randomFloat(2, 99999, 1),
-            'cost_price' => $this->faker->randomFloat(2, 99999, 1),
+            'unit_price' => $this->faker->randomFloat(2, 1, 99999),
+            'cost_price' => $this->faker->randomFloat(2, 1, 99999),
             'price_formula' => $this->faker->sentence,
         ];
     }

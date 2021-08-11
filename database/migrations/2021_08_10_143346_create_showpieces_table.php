@@ -17,7 +17,7 @@ class CreateShowpiecesTable extends Migration
             $table->increments('id');
             $table->unsignedInteger('manufacturer_id')->default(0)->comment('厂家');
             $table->string('mo')->default('')->comment('MO');
-            $table->string('code')->default('')->comment('编号');
+            $table->string('no')->default('')->comment('编号');
             $table->string('name')->default('')->comment('产品名');
             $table->string('english_name')->default('')->comment('产品名『英文』');
             $table->string('spec')->default('')->comment('规格');

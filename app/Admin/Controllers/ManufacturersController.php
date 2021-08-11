@@ -18,7 +18,7 @@ class ManufacturersController extends AdminController
     {
         return Grid::make(new Manufacturer(), function (Grid $grid) {
             $grid->column('id')->sortable();
-            $grid->column('code');
+            $grid->column('no');
             $grid->column('name');
             $grid->column('category');
             $grid->column('purchaser');
@@ -90,7 +90,7 @@ class ManufacturersController extends AdminController
      */
     private function basic($form)
     {
-        $form->text('code')->required();
+        $form->text('no')->required();
         $form->text('name')->required();
         $form->select('category')
             ->options([1 => '测试分类'])

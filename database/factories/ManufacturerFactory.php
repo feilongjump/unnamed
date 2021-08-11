@@ -22,7 +22,7 @@ class ManufacturerFactory extends Factory
     public function definition(): array
     {
         return [
-            'code' => $this->faker->bothify('?????-#####'),
+            'no' => $this->faker->bothify('?????-#####'),
             'name' => $this->faker->word,
             'category' => $this->faker->word,
             'address' => $this->faker->address,

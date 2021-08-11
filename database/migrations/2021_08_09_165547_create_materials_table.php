@@ -16,7 +16,7 @@ class CreateMaterialsTable extends Migration
         Schema::create('materials', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('manufacturer_id')->default(0)->comment('厂家');
-            $table->string('code')->default('')->comment('物料编号');
+            $table->string('no')->default('')->comment('物料编号');
             $table->string('name')->default('')->comment('名称');
             $table->string('spec')->default('')->comment('规格');
             $table->string('category')->default('')->comment('分类');

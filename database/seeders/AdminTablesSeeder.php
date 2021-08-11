@@ -20,136 +20,160 @@ class AdminTablesSeeder extends Seeder
         Models\Menu::insert(
             [
                 [
-                    "id" => 1,
-                    "parent_id" => 0,
-                    "order" => 1,
-                    "title" => "主页",
+                    "created_at" => "2021-08-05 17:32:50",
+                    "extension" => "",
                     "icon" => "feather icon-bar-chart-2",
-                    "uri" => "/",
-                    "extension" => "",
+                    "id" => 1,
+                    "order" => 1,
+                    "parent_id" => 0,
                     "show" => 1,
-                    "created_at" => "2021-08-05 17:32:50",
-                    "updated_at" => NULL
+                    "title" => "主页",
+                    "updated_at" => NULL,
+                    "uri" => "/"
                 ],
                 [
-                    "id" => 2,
-                    "parent_id" => 0,
-                    "order" => 2,
-                    "title" => "系统管理",
+                    "created_at" => "2021-08-05 17:32:50",
+                    "extension" => "",
                     "icon" => "feather icon-settings",
-                    "uri" => "",
-                    "extension" => "",
-                    "show" => 1,
-                    "created_at" => "2021-08-05 17:32:50",
-                    "updated_at" => NULL
-                ],
-                [
-                    "id" => 3,
-                    "parent_id" => 2,
-                    "order" => 3,
-                    "title" => "管理员",
-                    "icon" => "",
-                    "uri" => "auth/users",
-                    "extension" => "",
-                    "show" => 1,
-                    "created_at" => "2021-08-05 17:32:50",
-                    "updated_at" => NULL
-                ],
-                [
-                    "id" => 4,
-                    "parent_id" => 2,
-                    "order" => 4,
-                    "title" => "角色",
-                    "icon" => "",
-                    "uri" => "auth/roles",
-                    "extension" => "",
-                    "show" => 1,
-                    "created_at" => "2021-08-05 17:32:50",
-                    "updated_at" => NULL
-                ],
-                [
-                    "id" => 5,
-                    "parent_id" => 2,
-                    "order" => 5,
-                    "title" => "权限",
-                    "icon" => "",
-                    "uri" => "auth/permissions",
-                    "extension" => "",
-                    "show" => 1,
-                    "created_at" => "2021-08-05 17:32:50",
-                    "updated_at" => NULL
-                ],
-                [
-                    "id" => 6,
-                    "parent_id" => 2,
-                    "order" => 6,
-                    "title" => "菜单",
-                    "icon" => "",
-                    "uri" => "auth/menu",
-                    "extension" => "",
-                    "show" => 1,
-                    "created_at" => "2021-08-05 17:32:50",
-                    "updated_at" => NULL
-                ],
-                [
-                    "id" => 7,
-                    "parent_id" => 0,
-                    "order" => 7,
-                    "title" => "基础数据",
-                    "icon" => "fa-bars",
-                    "uri" => NULL,
-                    "extension" => "",
-                    "show" => 1,
-                    "created_at" => "2021-08-06 10:00:00",
-                    "updated_at" => "2021-08-06 10:01:46"
-                ],
-                [
-                    "id" => 8,
-                    "parent_id" => 7,
-                    "order" => 8,
-                    "title" => "厂家管理",
-                    "icon" => NULL,
-                    "uri" => "manufacturers",
-                    "extension" => "",
-                    "show" => 1,
-                    "created_at" => "2021-08-06 10:01:27",
-                    "updated_at" => "2021-08-06 10:01:27"
-                ],
-                [
-                    "id" => 9,
-                    "parent_id" => 7,
+                    "id" => 2,
                     "order" => 9,
-                    "title" => "客户管理",
-                    "icon" => NULL,
-                    "uri" => "customers",
-                    "extension" => "",
+                    "parent_id" => 0,
                     "show" => 1,
-                    "created_at" => "2021-08-09 16:28:57",
-                    "updated_at" => "2021-08-09 16:28:57"
+                    "title" => "系统管理",
+                    "updated_at" => "2021-08-11 17:41:51",
+                    "uri" => ""
                 ],
                 [
-                    "id" => 10,
-                    "parent_id" => 7,
+                    "created_at" => "2021-08-05 17:32:50",
+                    "extension" => "",
+                    "icon" => "",
+                    "id" => 3,
                     "order" => 10,
-                    "title" => "物料管理",
-                    "icon" => NULL,
-                    "uri" => "materials",
-                    "extension" => "",
+                    "parent_id" => 2,
                     "show" => 1,
-                    "created_at" => "2021-08-09 16:56:13",
-                    "updated_at" => "2021-08-09 16:56:13"
+                    "title" => "管理员",
+                    "updated_at" => "2021-08-11 17:41:51",
+                    "uri" => "auth/users"
                 ],
                 [
-                    "id" => 11,
-                    "parent_id" => 7,
-                    "order" => 11,
-                    "title" => "样品档案",
-                    "icon" => NULL,
-                    "uri" => "showpieces",
+                    "created_at" => "2021-08-05 17:32:50",
                     "extension" => "",
+                    "icon" => "",
+                    "id" => 4,
+                    "order" => 11,
+                    "parent_id" => 2,
                     "show" => 1,
+                    "title" => "角色",
+                    "updated_at" => "2021-08-11 17:41:51",
+                    "uri" => "auth/roles"
+                ],
+                [
+                    "created_at" => "2021-08-05 17:32:50",
+                    "extension" => "",
+                    "icon" => "",
+                    "id" => 5,
+                    "order" => 12,
+                    "parent_id" => 2,
+                    "show" => 1,
+                    "title" => "权限",
+                    "updated_at" => "2021-08-11 17:41:51",
+                    "uri" => "auth/permissions"
+                ],
+                [
+                    "created_at" => "2021-08-05 17:32:50",
+                    "extension" => "",
+                    "icon" => "",
+                    "id" => 6,
+                    "order" => 13,
+                    "parent_id" => 2,
+                    "show" => 1,
+                    "title" => "菜单",
+                    "updated_at" => "2021-08-11 17:41:51",
+                    "uri" => "auth/menu"
+                ],
+                [
+                    "created_at" => "2021-08-06 10:00:00",
+                    "extension" => "",
+                    "icon" => "fa-bars",
+                    "id" => 7,
+                    "order" => 4,
+                    "parent_id" => 0,
+                    "show" => 1,
+                    "title" => "基础数据",
+                    "updated_at" => "2021-08-11 17:41:51",
+                    "uri" => NULL
+                ],
+                [
+                    "created_at" => "2021-08-06 10:01:27",
+                    "extension" => "",
+                    "icon" => NULL,
+                    "id" => 8,
+                    "order" => 5,
+                    "parent_id" => 7,
+                    "show" => 1,
+                    "title" => "厂家管理",
+                    "updated_at" => "2021-08-11 17:41:51",
+                    "uri" => "manufacturers"
+                ],
+                [
+                    "created_at" => "2021-08-09 16:28:57",
+                    "extension" => "",
+                    "icon" => NULL,
+                    "id" => 9,
+                    "order" => 6,
+                    "parent_id" => 7,
+                    "show" => 1,
+                    "title" => "客户管理",
+                    "updated_at" => "2021-08-11 17:41:51",
+                    "uri" => "customers"
+                ],
+                [
+                    "created_at" => "2021-08-09 16:56:13",
+                    "extension" => "",
+                    "icon" => NULL,
+                    "id" => 10,
+                    "order" => 7,
+                    "parent_id" => 7,
+                    "show" => 1,
+                    "title" => "物料管理",
+                    "updated_at" => "2021-08-11 17:41:51",
+                    "uri" => "materials"
+                ],
+                [
                     "created_at" => "2021-08-10 14:35:26",
-                    "updated_at" => "2021-08-10 14:35:26"
+                    "extension" => "",
+                    "icon" => NULL,
+                    "id" => 11,
+                    "order" => 8,
+                    "parent_id" => 7,
+                    "show" => 1,
+                    "title" => "样品档案",
+                    "updated_at" => "2021-08-11 17:41:51",
+                    "uri" => "showpieces"
+                ],
+                [
+                    "created_at" => "2021-08-11 17:41:22",
+                    "extension" => "",
+                    "icon" => "fa-reorder",
+                    "id" => 12,
+                    "order" => 2,
+                    "parent_id" => 0,
+                    "show" => 1,
+                    "title" => "销售管理",
+                    "updated_at" => "2021-08-11 17:41:51",
+                    "uri" => NULL
+                ],
+                [
+                    "created_at" => "2021-08-11 17:41:44",
+                    "extension" => "",
+                    "icon" => NULL,
+                    "id" => 13,
+                    "order" => 3,
+                    "parent_id" => 12,
+                    "show" => 1,
+                    "title" => "报价单",
+                    "updated_at" => "2021-08-11 17:41:51",
+                    "uri" => "quotes"
                 ]
             ]
         );
@@ -158,69 +182,69 @@ class AdminTablesSeeder extends Seeder
         Models\Permission::insert(
             [
                 [
-                    "id" => 1,
-                    "name" => "Auth management",
-                    "slug" => "auth-management",
+                    "created_at" => "2021-08-05 17:32:50",
                     "http_method" => "",
                     "http_path" => "",
+                    "id" => 1,
+                    "name" => "Auth management",
                     "order" => 1,
                     "parent_id" => 0,
-                    "created_at" => "2021-08-05 17:32:50",
+                    "slug" => "auth-management",
                     "updated_at" => NULL
                 ],
                 [
-                    "id" => 2,
-                    "name" => "Users",
-                    "slug" => "users",
+                    "created_at" => "2021-08-05 17:32:50",
                     "http_method" => "",
                     "http_path" => "/auth/users*",
+                    "id" => 2,
+                    "name" => "Users",
                     "order" => 2,
                     "parent_id" => 1,
-                    "created_at" => "2021-08-05 17:32:50",
+                    "slug" => "users",
                     "updated_at" => NULL
                 ],
                 [
-                    "id" => 3,
-                    "name" => "Roles",
-                    "slug" => "roles",
+                    "created_at" => "2021-08-05 17:32:50",
                     "http_method" => "",
                     "http_path" => "/auth/roles*",
+                    "id" => 3,
+                    "name" => "Roles",
                     "order" => 3,
                     "parent_id" => 1,
-                    "created_at" => "2021-08-05 17:32:50",
+                    "slug" => "roles",
                     "updated_at" => NULL
                 ],
                 [
-                    "id" => 4,
-                    "name" => "Permissions",
-                    "slug" => "permissions",
+                    "created_at" => "2021-08-05 17:32:50",
                     "http_method" => "",
                     "http_path" => "/auth/permissions*",
+                    "id" => 4,
+                    "name" => "Permissions",
                     "order" => 4,
                     "parent_id" => 1,
-                    "created_at" => "2021-08-05 17:32:50",
+                    "slug" => "permissions",
                     "updated_at" => NULL
                 ],
                 [
-                    "id" => 5,
-                    "name" => "Menu",
-                    "slug" => "menu",
+                    "created_at" => "2021-08-05 17:32:50",
                     "http_method" => "",
                     "http_path" => "/auth/menu*",
+                    "id" => 5,
+                    "name" => "Menu",
                     "order" => 5,
                     "parent_id" => 1,
-                    "created_at" => "2021-08-05 17:32:50",
+                    "slug" => "menu",
                     "updated_at" => NULL
                 ],
                 [
-                    "id" => 6,
-                    "name" => "Extension",
-                    "slug" => "extension",
+                    "created_at" => "2021-08-05 17:32:50",
                     "http_method" => "",
                     "http_path" => "/auth/extensions*",
+                    "id" => 6,
+                    "name" => "Extension",
                     "order" => 6,
                     "parent_id" => 1,
-                    "created_at" => "2021-08-05 17:32:50",
+                    "slug" => "extension",
                     "updated_at" => NULL
                 ]
             ]
@@ -230,10 +254,10 @@ class AdminTablesSeeder extends Seeder
         Models\Role::insert(
             [
                 [
+                    "created_at" => "2021-08-05 17:32:50",
                     "id" => 1,
                     "name" => "Administrator",
                     "slug" => "administrator",
-                    "created_at" => "2021-08-05 17:32:50",
                     "updated_at" => "2021-08-05 17:32:50"
                 ]
             ]
@@ -250,13 +274,13 @@ class AdminTablesSeeder extends Seeder
 		Models\Extension::insert(
 			[
                 [
-                    "id" => 1,
-                    "name" => "dcat-admin.form-step",
-                    "version" => "1.0.0",
-                    "is_enabled" => 1,
-                    "options" => NULL,
                     "created_at" => "2021-08-09 16:29:08",
-                    "updated_at" => "2021-08-09 16:29:10"
+                    "id" => 1,
+                    "is_enabled" => 1,
+                    "name" => "dcat-admin.form-step",
+                    "options" => NULL,
+                    "updated_at" => "2021-08-09 16:29:10",
+                    "version" => "1.0.0"
                 ]
             ]
 		);
@@ -265,13 +289,13 @@ class AdminTablesSeeder extends Seeder
 		Models\ExtensionHistory::insert(
 			[
                 [
+                    "created_at" => "2021-08-09 16:29:08",
+                    "detail" => "Initialize extension.",
                     "id" => 1,
                     "name" => "dcat-admin.form-step",
                     "type" => 1,
-                    "version" => "1.0.0",
-                    "detail" => "Initialize extension.",
-                    "created_at" => "2021-08-09 16:29:08",
-                    "updated_at" => "2021-08-09 16:29:08"
+                    "updated_at" => "2021-08-09 16:29:08",
+                    "version" => "1.0.0"
                 ]
             ]
 		);

@@ -18,7 +18,7 @@ class CreatePartsTable extends Migration
             $table->unsignedInteger('showpiece_id');
             $table->unsignedInteger('manufacturer_id')->default(0);
             $table->string('art_no')->default('')->comment('货号');
-            $table->string('code')->default('')->comment('编号');
+            $table->string('no')->default('')->comment('编号');
             $table->string('name')->default('')->comment('名称');
             $table->string('spec')->default('')->comment('规格');
             $table->unsignedDecimal('rate', 5)->default(0.00)->comment('配比');

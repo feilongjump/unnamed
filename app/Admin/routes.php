@@ -18,6 +18,7 @@ Route::group([
     $router->resource('customers', 'CustomersController');
     $router->resource('materials', 'MaterialsController');
     $router->resource('showpieces', 'ShowpiecesController');
+    $router->resource('quotes', 'QuotesController');
 
     /**
      * API
