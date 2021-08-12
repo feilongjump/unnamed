@@ -2,6 +2,8 @@
 
 namespace App\Admin\Controllers;
 
+use App\Models\Customer;
+use App\Models\CustomerContact;
 use App\Models\Quote;
 use Dcat\Admin\Form;
 use Dcat\Admin\Grid;
@@ -57,31 +59,65 @@ class QuotesController extends AdminController
     protected function form(): Form
     {
         return Form::make(new Quote(), function (Form $form) {
-            $form->display('id');
-            $form->text('customer_id');
-            $form->text('customer_contact_id');
-            $form->text('no');
-            $form->text('company');
-            $form->text('salesman_id');
-            $form->text('merchandiser_id');
-            $form->text('purchaser_id');
-            $form->text('po');
-            $form->text('profit_margin');
-            $form->text('total_amount');
-            $form->text('currency');
-            $form->text('exchange_rate');
-            $form->text('commission');
-            $form->text('rebate');
-            $form->text('sea_freight');
-            $form->text('actual_total_amount');
-            $form->text('pol');
-            $form->text('pod');
-            $form->text('valuation_clause');
-            $form->text('remarks');
-            $form->text('delivered_at');
+            $this->basic($form);
+        });
+    }
 
-            $form->display('created_at');
-            $form->display('updated_at');
+    private function basic(Form $form)
+    {
+        $form->block(7, function (Form\BlockForm $form) {
+            $form->title('基础信息');
+
+            $form->row(function (Form\Row $form) {
+                $form->width(6)->text('no');
+                $form->width(6)->text('po');
+                $form->width(4)->select('customer_id')
+                    ->options(function ($id) {
+                        $customer = Customer::find($id);
+
+                        if ($customer) {
+                            return [$customer->id => $customer->name];
+                        }
+                    })
+                    ->ajax('api/customers')
+                    ->load('customer_contact_id', 'api/customers/contacts');
+                $form->width(4)->select('customer_contact_id')
+                    ->options(function ($id) {
+                        $customerContact = CustomerContact::find($id);
+
+                        if ($customerContact) {
+                            return [$customerContact->id => $customerContact->name];
+                        }
+                    });
+                $form->width(4)->text('company');
+                $form->width(4)->text('salesman_id');
+                $form->width(4)->text('merchandiser_id');
+                $form->width(4)->text('purchaser_id');
+                $form->width(6)->text('pol');
+                $form->width(6)->text('pod');
+                $form->width(6)->text('valuation_clause');
+                $form->width(12)->textarea('remarks');
+            });
+        });
+
+        $form->block(5, function (Form\BlockForm $form) {
+
+            $form->row(function (Form\Row $form) {
+                $form->width(6)->text('currency');
+                $form->width(6)->text('exchange_rate');
+                $form->width(6)->text('sea_freight');
+                $form->width(6)->text('commission');
+                $form->width(6)->text('rebate');
+                $form->width(6)->text('profit_margin');
+                $form->width(6)->text('actual_total_amount');
+                $form->width(6)->text('total_amount');
+                $form->width(6)->datetime('delivered_at');
+                $form->width(6)->radio('processing_status')
+                    ->options(Quote::$processingStatusMap);
+            });
+
+            // 显示底部提交按钮
+            $form->showFooter();
         });
     }
 }

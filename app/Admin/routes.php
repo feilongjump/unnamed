@@ -30,6 +30,8 @@ Route::group([
     ], function (Router $router) {
 
         $router->get('manufacturers', 'ManufacturersController@index');
+        $router->get('customers', 'CustomersController@index');
+        $router->get('customers/contacts', 'CustomersController@contacts');
 
     });
 });

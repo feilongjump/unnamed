@@ -8,7 +8,6 @@ use Illuminate\Routing\Controller;
 
 class ManufacturersController extends Controller
 {
-
     public function index(Request $request)
     {
         $keywords = $request->q;
