@@ -93,14 +93,15 @@ class QuotesController extends AdminController
                 $form->width(4)->text('salesman_id');
                 $form->width(4)->text('merchandiser_id');
                 $form->width(4)->text('purchaser_id');
-                $form->width(6)->text('pol');
-                $form->width(6)->text('pod');
-                $form->width(6)->text('valuation_clause');
-                $form->width(12)->textarea('remarks');
+                $form->width(4)->text('pol');
+                $form->width(4)->text('pod');
+                $form->width(4)->text('valuation_clause');
+                $form->width()->textarea('remarks')->rows(6);
             });
         });
 
         $form->block(5, function (Form\BlockForm $form) {
+            $form->title('金额');
 
             $form->row(function (Form\Row $form) {
                 $form->width(6)->text('currency');
@@ -112,6 +113,7 @@ class QuotesController extends AdminController
                 $form->width(6)->text('actual_total_amount');
                 $form->width(6)->text('total_amount');
                 $form->width(6)->datetime('delivered_at');
+                $form->width(6)->datetime('created_at');
                 $form->width(6)->radio('processing_status')
                     ->options(Quote::$processingStatusMap);
             });

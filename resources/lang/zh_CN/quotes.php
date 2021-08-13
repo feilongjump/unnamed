@@ -26,6 +26,7 @@ return [
         'valuation_clause'    => '价格条款',
         'remarks'             => '备注',
         'delivered_at'        => '交付日期',
+        'created_at'          => '报价日期',
         'processing_status'   => '处理状态',
     ],
     'options' => [
