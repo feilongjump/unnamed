@@ -1,0 +1,37 @@
+<?php 
+return [
+    'labels' => [
+        'QuoteItems' => 'QuoteItems',
+        'quote-items' => 'QuoteItems',
+    ],
+    'fields' => [
+        'manufacturer_id' => '厂家',
+        'no' => '货号',
+        'customer_no' => '客号',
+        'packing_method' => '包装方式',
+        'inner' => '内',
+        'intermediate' => '中',
+        'outer' => '外',
+        'composition_mode' => '组成方式',
+        'quantity' => '套数',
+        'quote_unit' => '报价单位',
+        'unit_price' => '单价',
+        'profit_margin' => '利润率',
+        'fob' => 'FOB',
+        'fob_cost' => 'FOB 成本',
+        'fob_fee' => 'FOB 费用',
+        'quotation_benchmark' => '报价基准',
+        'product_factory_price' => '产品出厂价',
+        'direct_cost' => '直接成本',
+        'component_cost' => '部件成本',
+        'packaging_cost' => '包材成本',
+        'other_cost' => '其他成本',
+        'sea_freight' => '海运费',
+        'commission' => '佣金',
+        'product_cbm' => '产品 CBM',
+        'cbm_box' => 'CMB / 箱',
+        'moq' => 'MOQ',
+    ],
+    'options' => [
+    ],
+];

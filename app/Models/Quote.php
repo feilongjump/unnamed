@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Quote extends Model
@@ -38,5 +39,15 @@ class Quote extends Model
     public function customer_contact(): BelongsTo
     {
         return $this->belongsTo(CustomerContact::class);
+    }
+
+    /**
+     *
+     *
+     * @return HasMany
+     */
+    public function items(): HasMany
+    {
+        return $this->hasMany(QuoteItem::class);
     }
 }
