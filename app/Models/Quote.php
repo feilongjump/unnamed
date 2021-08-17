@@ -50,4 +50,24 @@ class Quote extends Model
     {
         return $this->hasMany(QuoteItem::class);
     }
+
+    /**
+     * 配件
+     *
+     * @return HasMany
+     */
+    public function parts(): HasMany
+    {
+        return $this->hasMany(QuotePart::class);
+    }
+
+    /**
+     * 包材
+     *
+     * @return HasMany
+     */
+    public function packages(): HasMany
+    {
+        return $this->hasMany(QuotePackage::class);
+    }
 }

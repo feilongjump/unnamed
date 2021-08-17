@@ -77,14 +77,34 @@ namespace Dcat\Admin {
      * @property Grid\Column|Collection token
      * @property Grid\Column|Collection relevance_id
      * @property Grid\Column|Collection path
+     * @property Grid\Column|Collection quote_id
+     * @property Grid\Column|Collection customer_no
+     * @property Grid\Column|Collection packing_method
+     * @property Grid\Column|Collection inner
+     * @property Grid\Column|Collection intermediate
+     * @property Grid\Column|Collection outer
+     * @property Grid\Column|Collection composition_mode
+     * @property Grid\Column|Collection quote_unit
+     * @property Grid\Column|Collection profit_margin
+     * @property Grid\Column|Collection fob
+     * @property Grid\Column|Collection fob_cost
+     * @property Grid\Column|Collection fob_fee
+     * @property Grid\Column|Collection quotation_benchmark
+     * @property Grid\Column|Collection product_factory_price
+     * @property Grid\Column|Collection direct_cost
+     * @property Grid\Column|Collection component_cost
+     * @property Grid\Column|Collection packaging_cost
+     * @property Grid\Column|Collection other_cost
+     * @property Grid\Column|Collection sea_freight
+     * @property Grid\Column|Collection commission
+     * @property Grid\Column|Collection product_cbm
+     * @property Grid\Column|Collection cbm_box
+     * @property Grid\Column|Collection moq
      * @property Grid\Column|Collection customer_contact_id
      * @property Grid\Column|Collection company
      * @property Grid\Column|Collection po
      * @property Grid\Column|Collection exchange_rate
-     * @property Grid\Column|Collection commission
      * @property Grid\Column|Collection rebate
-     * @property Grid\Column|Collection sea_freight
-     * @property Grid\Column|Collection profit_margin
      * @property Grid\Column|Collection total_amount
      * @property Grid\Column|Collection actual_total_amount
      * @property Grid\Column|Collection pol
@@ -170,14 +190,34 @@ namespace Dcat\Admin {
      * @method Grid\Column|Collection token(string $label = null)
      * @method Grid\Column|Collection relevance_id(string $label = null)
      * @method Grid\Column|Collection path(string $label = null)
+     * @method Grid\Column|Collection quote_id(string $label = null)
+     * @method Grid\Column|Collection customer_no(string $label = null)
+     * @method Grid\Column|Collection packing_method(string $label = null)
+     * @method Grid\Column|Collection inner(string $label = null)
+     * @method Grid\Column|Collection intermediate(string $label = null)
+     * @method Grid\Column|Collection outer(string $label = null)
+     * @method Grid\Column|Collection composition_mode(string $label = null)
+     * @method Grid\Column|Collection quote_unit(string $label = null)
+     * @method Grid\Column|Collection profit_margin(string $label = null)
+     * @method Grid\Column|Collection fob(string $label = null)
+     * @method Grid\Column|Collection fob_cost(string $label = null)
+     * @method Grid\Column|Collection fob_fee(string $label = null)
+     * @method Grid\Column|Collection quotation_benchmark(string $label = null)
+     * @method Grid\Column|Collection product_factory_price(string $label = null)
+     * @method Grid\Column|Collection direct_cost(string $label = null)
+     * @method Grid\Column|Collection component_cost(string $label = null)
+     * @method Grid\Column|Collection packaging_cost(string $label = null)
+     * @method Grid\Column|Collection other_cost(string $label = null)
+     * @method Grid\Column|Collection sea_freight(string $label = null)
+     * @method Grid\Column|Collection commission(string $label = null)
+     * @method Grid\Column|Collection product_cbm(string $label = null)
+     * @method Grid\Column|Collection cbm_box(string $label = null)
+     * @method Grid\Column|Collection moq(string $label = null)
      * @method Grid\Column|Collection customer_contact_id(string $label = null)
      * @method Grid\Column|Collection company(string $label = null)
      * @method Grid\Column|Collection po(string $label = null)
      * @method Grid\Column|Collection exchange_rate(string $label = null)
-     * @method Grid\Column|Collection commission(string $label = null)
      * @method Grid\Column|Collection rebate(string $label = null)
-     * @method Grid\Column|Collection sea_freight(string $label = null)
-     * @method Grid\Column|Collection profit_margin(string $label = null)
      * @method Grid\Column|Collection total_amount(string $label = null)
      * @method Grid\Column|Collection actual_total_amount(string $label = null)
      * @method Grid\Column|Collection pol(string $label = null)
@@ -268,14 +308,34 @@ namespace Dcat\Admin {
      * @property Show\Field|Collection token
      * @property Show\Field|Collection relevance_id
      * @property Show\Field|Collection path
+     * @property Show\Field|Collection quote_id
+     * @property Show\Field|Collection customer_no
+     * @property Show\Field|Collection packing_method
+     * @property Show\Field|Collection inner
+     * @property Show\Field|Collection intermediate
+     * @property Show\Field|Collection outer
+     * @property Show\Field|Collection composition_mode
+     * @property Show\Field|Collection quote_unit
+     * @property Show\Field|Collection profit_margin
+     * @property Show\Field|Collection fob
+     * @property Show\Field|Collection fob_cost
+     * @property Show\Field|Collection fob_fee
+     * @property Show\Field|Collection quotation_benchmark
+     * @property Show\Field|Collection product_factory_price
+     * @property Show\Field|Collection direct_cost
+     * @property Show\Field|Collection component_cost
+     * @property Show\Field|Collection packaging_cost
+     * @property Show\Field|Collection other_cost
+     * @property Show\Field|Collection sea_freight
+     * @property Show\Field|Collection commission
+     * @property Show\Field|Collection product_cbm
+     * @property Show\Field|Collection cbm_box
+     * @property Show\Field|Collection moq
      * @property Show\Field|Collection customer_contact_id
      * @property Show\Field|Collection company
      * @property Show\Field|Collection po
      * @property Show\Field|Collection exchange_rate
-     * @property Show\Field|Collection commission
      * @property Show\Field|Collection rebate
-     * @property Show\Field|Collection sea_freight
-     * @property Show\Field|Collection profit_margin
      * @property Show\Field|Collection total_amount
      * @property Show\Field|Collection actual_total_amount
      * @property Show\Field|Collection pol
@@ -361,14 +421,34 @@ namespace Dcat\Admin {
      * @method Show\Field|Collection token(string $label = null)
      * @method Show\Field|Collection relevance_id(string $label = null)
      * @method Show\Field|Collection path(string $label = null)
+     * @method Show\Field|Collection quote_id(string $label = null)
+     * @method Show\Field|Collection customer_no(string $label = null)
+     * @method Show\Field|Collection packing_method(string $label = null)
+     * @method Show\Field|Collection inner(string $label = null)
+     * @method Show\Field|Collection intermediate(string $label = null)
+     * @method Show\Field|Collection outer(string $label = null)
+     * @method Show\Field|Collection composition_mode(string $label = null)
+     * @method Show\Field|Collection quote_unit(string $label = null)
+     * @method Show\Field|Collection profit_margin(string $label = null)
+     * @method Show\Field|Collection fob(string $label = null)
+     * @method Show\Field|Collection fob_cost(string $label = null)
+     * @method Show\Field|Collection fob_fee(string $label = null)
+     * @method Show\Field|Collection quotation_benchmark(string $label = null)
+     * @method Show\Field|Collection product_factory_price(string $label = null)
+     * @method Show\Field|Collection direct_cost(string $label = null)
+     * @method Show\Field|Collection component_cost(string $label = null)
+     * @method Show\Field|Collection packaging_cost(string $label = null)
+     * @method Show\Field|Collection other_cost(string $label = null)
+     * @method Show\Field|Collection sea_freight(string $label = null)
+     * @method Show\Field|Collection commission(string $label = null)
+     * @method Show\Field|Collection product_cbm(string $label = null)
+     * @method Show\Field|Collection cbm_box(string $label = null)
+     * @method Show\Field|Collection moq(string $label = null)
      * @method Show\Field|Collection customer_contact_id(string $label = null)
      * @method Show\Field|Collection company(string $label = null)
      * @method Show\Field|Collection po(string $label = null)
      * @method Show\Field|Collection exchange_rate(string $label = null)
-     * @method Show\Field|Collection commission(string $label = null)
      * @method Show\Field|Collection rebate(string $label = null)
-     * @method Show\Field|Collection sea_freight(string $label = null)
-     * @method Show\Field|Collection profit_margin(string $label = null)
      * @method Show\Field|Collection total_amount(string $label = null)
      * @method Show\Field|Collection actual_total_amount(string $label = null)
      * @method Show\Field|Collection pol(string $label = null)

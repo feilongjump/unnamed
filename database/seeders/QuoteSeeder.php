@@ -17,6 +17,8 @@ class QuoteSeeder extends Seeder
         Quote::factory()
             ->count(9)
             ->hasItems(3)
+            ->hasParts(3)
+            ->hasPackages(3)
             ->create();
     }
 }

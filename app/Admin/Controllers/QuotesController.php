@@ -58,8 +58,14 @@ class QuotesController extends AdminController
      */
     protected function form(): Form
     {
-        return Form::make(new Quote(), function (Form $form) {
+        return Form::make(Quote::with(['items', 'parts', 'packages']), function (Form $form) {
             $this->basic($form);
+
+            $this->items($form);
+
+                $this->parts($form);
+
+                $this->packages($form);
         });
     }
 
@@ -121,5 +127,74 @@ class QuotesController extends AdminController
             // 显示底部提交按钮
             $form->showFooter();
         });
+    }
+
+    public function items(Form $form)
+    {
+        $form->block(12, function (Form\BlockForm $form) {
+            $form->hasMany('items', '', function (Form\NestedForm $form) {
+
+                $form->text('manufacturer_id')->width('600px');
+                $form->text('no');
+                $form->text('customer_no');
+                $form->text('packing_method');
+                $form->text('inner');
+                $form->text('intermediate');
+                $form->text('outer');
+                $form->text('composition_mode');
+                $form->text('quantity');
+                $form->text('quote_unit');
+                $form->text('unit_price');
+                $form->text('profit_margin');
+                $form->text('fob');
+                $form->text('fob_cost');
+                $form->text('fob_fee');
+                $form->text('quotation_benchmark');
+                $form->text('product_factory_price');
+                $form->text('direct_cost');
+                $form->text('component_cost');
+                $form->text('packaging_cost');
+                $form->text('other_cost');
+                $form->text('sea_freight');
+                $form->text('commission');
+                $form->text('product_cbm');
+                $form->text('cbm_box');
+                $form->text('moq');
+            })->useTable()->width(12);
+        });
+    }
+
+    public function parts(Form $form)
+    {
+        $form->block(12, function (Form\BlockForm $form) {
+            $form->hasMany('parts', '配件列表', function (Form\NestedForm $form) {
+                $form->text('manufacturer_id');
+                $form->text('no');
+                $form->text('name');
+                $form->text('spec');
+                $form->text('rate');
+                $form->text('quantity');
+                $form->text('unit_price');
+                $form->text('amount');
+                $form->text('remarks');
+            })->useTable()->width(12);
+        });
+    }
+
+    public function packages(Form $form)
+    {
+        $form->block(12, function (Form\BlockForm $form) {
+
+            $form->hasMany('parts', '包材列表', function (Form\NestedForm $form) {
+                $form->text('manufacturer_id');
+                $form->text('no');
+                $form->text('name');
+                $form->text('spec');
+                $form->text('rate');
+                $form->text('quantity');
+                $form->text('unit_price');
+                $form->text('remarks');
+            })->useTable()->width(12);
+       });
     }
 }

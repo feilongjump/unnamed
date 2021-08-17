@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-class QuoteItem extends Model
+class QuotePart extends Model
 {
     //
 }
