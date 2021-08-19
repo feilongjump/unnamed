@@ -1,10 +1,10 @@
 <?php
 
 return [
-    'labels' => [
+    'labels'  => [
         'Extensions' => '扩展',
     ],
-    'fields' => [
+    'fields'  => [
         'alias'       => '别名',
         'description' => '描述',
         'authors'     => '开发者',

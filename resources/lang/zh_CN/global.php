@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'fields' => [
+    'fields'  => [
         'id'                    => 'ID',
         'name'                  => '名称',
         'username'              => '用户名',
@@ -23,7 +23,7 @@ return [
         'input'                 => '输入',
         'type'                  => '类型',
     ],
-    'labels' => [
+    'labels'  => [
         'list'     => '列表',
         'edit'     => '编辑',
         'detail'   => '详细',

@@ -63,9 +63,9 @@ class QuotesController extends AdminController
 
             $this->items($form);
 
-                $this->parts($form);
+            $this->parts($form);
 
-                $this->packages($form);
+            $this->packages($form);
         });
     }
 
@@ -195,6 +195,6 @@ class QuotesController extends AdminController
                 $form->text('unit_price');
                 $form->text('remarks');
             })->useTable()->width(12);
-       });
+        });
     }
 }
