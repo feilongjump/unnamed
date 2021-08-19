@@ -174,6 +174,18 @@ class AdminTablesSeeder extends Seeder
                     "title" => "报价单",
                     "updated_at" => "2021-08-11 17:41:51",
                     "uri" => "quotes"
+                ],
+                [
+                    "created_at" => "2021-08-18 09:42:53",
+                    "extension" => "",
+                    "icon" => NULL,
+                    "id" => 14,
+                    "order" => 14,
+                    "parent_id" => 12,
+                    "show" => 1,
+                    "title" => "订单",
+                    "updated_at" => "2021-08-18 09:42:53",
+                    "uri" => "orders"
                 ]
             ]
         );

@@ -2,6 +2,7 @@
 
 namespace App\Admin\Controllers;
 
+use App\Models\Picture;
 use Dcat\Admin\Form;
 use Dcat\Admin\Grid;
 use App\Models\Order;
@@ -44,10 +45,10 @@ class OrdersController extends AdminController
             $grid->column('delivered_at');
             $grid->column('created_at');
             $grid->column('updated_at')->sortable();
-        
+
             $grid->filter(function (Grid\Filter $filter) {
                 $filter->equal('id');
-        
+
             });
         });
     }
@@ -59,7 +60,7 @@ class OrdersController extends AdminController
      */
     protected function form(): Form
     {
-        return Form::make(Order::with(['items', 'parts', 'packages']), function (Form $form) {
+        return Form::make(Order::with(['items', 'parts', 'packages', 'mark', 'pictures']), function (Form $form) {
             $this->basic($form);
 
             $this->items($form);
@@ -67,6 +68,10 @@ class OrdersController extends AdminController
             $this->parts($form);
 
             $this->packages($form);
+
+            $this->mark($form);
+
+            $this->pictures($form);
         });
     }
 
@@ -130,7 +135,7 @@ class OrdersController extends AdminController
         });
     }
 
-    public function items(Form $form)
+    private function items(Form $form)
     {
         $form->block(12, function (Form\BlockForm $form) {
             $form->hasMany('items', '', function (Form\NestedForm $form) {
@@ -183,7 +188,7 @@ class OrdersController extends AdminController
         });
     }
 
-    public function parts(Form $form)
+    private function parts(Form $form)
     {
         $form->block(12, function (Form\BlockForm $form) {
             $form->hasMany('parts', '配件列表', function (Form\NestedForm $form) {
@@ -200,7 +205,7 @@ class OrdersController extends AdminController
         });
     }
 
-    public function packages(Form $form)
+    private function packages(Form $form)
     {
         $form->block(12, function (Form\BlockForm $form) {
 
@@ -213,6 +218,55 @@ class OrdersController extends AdminController
                 $form->text('quantity');
                 $form->text('unit_price');
                 $form->text('remarks');
+            })->useTable()->width(12);
+        });
+    }
+
+    private function mark(Form $form)
+    {
+        $form->block(12, function (Form\BlockForm $form) {
+
+            $form->row(function (Form\Row $form) {
+
+                $form->width(6)
+                    ->textarea('mark.front.text', admin_trans('orders.fields.marks.front'))
+                    ->rows(7);
+                $form->width(6)->multipleImage('mark.front.images', '');
+            });
+
+            $form->row(function (Form\Row $form) {
+
+                $form->width(6)
+                    ->textarea('mark.side.text', admin_trans('orders.fields.marks.side'))
+                    ->rows(7);
+                $form->width(6)->multipleImage('mark.side.images', '');
+            });
+
+            $form->row(function (Form\Row $form) {
+
+                $form->width(6)
+                    ->textarea('mark.inner_box.text', admin_trans('orders.fields.marks.inner_box'))
+                    ->rows(7);
+                $form->width(6)->multipleImage('mark.inner_box.images', '');
+            });
+        });
+    }
+
+    /**
+     * 配件明细
+     *
+     * @param $form
+     */
+    private function pictures($form)
+    {
+        $form->block(12, function (Form\BlockForm $form) {
+            $form->hasMany('pictures', '', function (Form\NestedForm $form) {
+
+                $form->text('name');
+                $form->image('path');
+
+                $form->hidden('type')->value(Picture::ORDER);
+
             })->useTable()->width(12);
         });
     }

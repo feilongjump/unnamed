@@ -108,6 +108,8 @@ namespace Dcat\Admin {
      * @property Grid\Column|Collection tax_rebate_rate
      * @property Grid\Column|Collection unit_of_weight
      * @property Grid\Column|Collection weight
+     * @property Grid\Column|Collection rate
+     * @property Grid\Column|Collection amount
      * @property Grid\Column|Collection actual_total_amount
      * @property Grid\Column|Collection company
      * @property Grid\Column|Collection customer_contact_id
@@ -124,13 +126,11 @@ namespace Dcat\Admin {
      * @property Grid\Column|Collection cbm
      * @property Grid\Column|Collection cost_price
      * @property Grid\Column|Collection price_formula
-     * @property Grid\Column|Collection rate
      * @property Grid\Column|Collection showpiece_id
      * @property Grid\Column|Collection token
      * @property Grid\Column|Collection path
      * @property Grid\Column|Collection relevance_id
      * @property Grid\Column|Collection quote_id
-     * @property Grid\Column|Collection amount
      * @property Grid\Column|Collection describe
      * @property Grid\Column|Collection english_describe
      * @property Grid\Column|Collection english_pack_describe
@@ -238,6 +238,8 @@ namespace Dcat\Admin {
      * @method Grid\Column|Collection tax_rebate_rate(string $label = null)
      * @method Grid\Column|Collection unit_of_weight(string $label = null)
      * @method Grid\Column|Collection weight(string $label = null)
+     * @method Grid\Column|Collection rate(string $label = null)
+     * @method Grid\Column|Collection amount(string $label = null)
      * @method Grid\Column|Collection actual_total_amount(string $label = null)
      * @method Grid\Column|Collection company(string $label = null)
      * @method Grid\Column|Collection customer_contact_id(string $label = null)
@@ -254,13 +256,11 @@ namespace Dcat\Admin {
      * @method Grid\Column|Collection cbm(string $label = null)
      * @method Grid\Column|Collection cost_price(string $label = null)
      * @method Grid\Column|Collection price_formula(string $label = null)
-     * @method Grid\Column|Collection rate(string $label = null)
      * @method Grid\Column|Collection showpiece_id(string $label = null)
      * @method Grid\Column|Collection token(string $label = null)
      * @method Grid\Column|Collection path(string $label = null)
      * @method Grid\Column|Collection relevance_id(string $label = null)
      * @method Grid\Column|Collection quote_id(string $label = null)
-     * @method Grid\Column|Collection amount(string $label = null)
      * @method Grid\Column|Collection describe(string $label = null)
      * @method Grid\Column|Collection english_describe(string $label = null)
      * @method Grid\Column|Collection english_pack_describe(string $label = null)
@@ -373,6 +373,8 @@ namespace Dcat\Admin {
      * @property Show\Field|Collection tax_rebate_rate
      * @property Show\Field|Collection unit_of_weight
      * @property Show\Field|Collection weight
+     * @property Show\Field|Collection rate
+     * @property Show\Field|Collection amount
      * @property Show\Field|Collection actual_total_amount
      * @property Show\Field|Collection company
      * @property Show\Field|Collection customer_contact_id
@@ -389,13 +391,11 @@ namespace Dcat\Admin {
      * @property Show\Field|Collection cbm
      * @property Show\Field|Collection cost_price
      * @property Show\Field|Collection price_formula
-     * @property Show\Field|Collection rate
      * @property Show\Field|Collection showpiece_id
      * @property Show\Field|Collection token
      * @property Show\Field|Collection path
      * @property Show\Field|Collection relevance_id
      * @property Show\Field|Collection quote_id
-     * @property Show\Field|Collection amount
      * @property Show\Field|Collection describe
      * @property Show\Field|Collection english_describe
      * @property Show\Field|Collection english_pack_describe
@@ -503,6 +503,8 @@ namespace Dcat\Admin {
      * @method Show\Field|Collection tax_rebate_rate(string $label = null)
      * @method Show\Field|Collection unit_of_weight(string $label = null)
      * @method Show\Field|Collection weight(string $label = null)
+     * @method Show\Field|Collection rate(string $label = null)
+     * @method Show\Field|Collection amount(string $label = null)
      * @method Show\Field|Collection actual_total_amount(string $label = null)
      * @method Show\Field|Collection company(string $label = null)
      * @method Show\Field|Collection customer_contact_id(string $label = null)
@@ -519,13 +521,11 @@ namespace Dcat\Admin {
      * @method Show\Field|Collection cbm(string $label = null)
      * @method Show\Field|Collection cost_price(string $label = null)
      * @method Show\Field|Collection price_formula(string $label = null)
-     * @method Show\Field|Collection rate(string $label = null)
      * @method Show\Field|Collection showpiece_id(string $label = null)
      * @method Show\Field|Collection token(string $label = null)
      * @method Show\Field|Collection path(string $label = null)
      * @method Show\Field|Collection relevance_id(string $label = null)
      * @method Show\Field|Collection quote_id(string $label = null)
-     * @method Show\Field|Collection amount(string $label = null)
      * @method Show\Field|Collection describe(string $label = null)
      * @method Show\Field|Collection english_describe(string $label = null)
      * @method Show\Field|Collection english_pack_describe(string $label = null)

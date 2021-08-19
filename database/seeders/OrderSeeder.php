@@ -19,6 +19,7 @@ class OrderSeeder extends Seeder
         ->hasItems(3)
         ->hasParts(3)
         ->hasPackages(3)
+        ->hasMark(1)
         ->create();
     }
 }

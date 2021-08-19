@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class Order extends Model
 {
@@ -69,5 +70,26 @@ class Order extends Model
     public function packages(): HasMany
     {
         return $this->hasMany(OrderPackage::class);
+    }
+
+    /**
+     * 唛头
+     *
+     * @return HasOne
+     */
+    public function mark(): HasOne
+    {
+        return $this->hasOne(OrderMark::class);
+    }
+
+    /**
+     * 图片信息
+     *
+     * @return HasMany
+     */
+    public function pictures(): HasMany
+    {
+        return $this->hasMany(Picture::class, 'relevance_id')
+            ->where('type', Picture::ORDER);
     }
 }
