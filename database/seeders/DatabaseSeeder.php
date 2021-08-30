@@ -23,6 +23,7 @@ class DatabaseSeeder extends Seeder
         $this->call(ShowpieceSeeder::class);
         $this->call(QuoteSeeder::class);
         $this->call(OrderSeeder::class);
+        $this->call(ContractSeeder::class);
 
         Model::reguard();
     }

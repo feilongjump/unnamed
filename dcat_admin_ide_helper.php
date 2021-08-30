@@ -36,14 +36,42 @@ namespace Dcat\Admin {
      * @property Grid\Column|Collection password
      * @property Grid\Column|Collection remember_token
      * @property Grid\Column|Collection username
+     * @property Grid\Column|Collection amount
+     * @property Grid\Column|Collection art_no
+     * @property Grid\Column|Collection contract_id
+     * @property Grid\Column|Collection deleted_at
+     * @property Grid\Column|Collection is_tax_included
+     * @property Grid\Column|Collection no
+     * @property Grid\Column|Collection price_excluding_tax
+     * @property Grid\Column|Collection quantity
+     * @property Grid\Column|Collection remarks
+     * @property Grid\Column|Collection spec
+     * @property Grid\Column|Collection tax_rate
+     * @property Grid\Column|Collection unit_price
+     * @property Grid\Column|Collection company
+     * @property Grid\Column|Collection contract_type
+     * @property Grid\Column|Collection currency
+     * @property Grid\Column|Collection delivered_at
+     * @property Grid\Column|Collection exchange_rate
+     * @property Grid\Column|Collection invoice_type
+     * @property Grid\Column|Collection manufacturer_contact_id
+     * @property Grid\Column|Collection manufacturer_id
+     * @property Grid\Column|Collection merchandiser_id
+     * @property Grid\Column|Collection order_no
+     * @property Grid\Column|Collection payment_account
+     * @property Grid\Column|Collection processing_status
+     * @property Grid\Column|Collection purchase_method
+     * @property Grid\Column|Collection purchased_at
+     * @property Grid\Column|Collection purchaser_id
+     * @property Grid\Column|Collection purchaser_no
+     * @property Grid\Column|Collection total_amount
+     * @property Grid\Column|Collection valuation_clause
      * @property Grid\Column|Collection account_bank
      * @property Grid\Column|Collection account_name
      * @property Grid\Column|Collection account_number
      * @property Grid\Column|Collection bank_address
      * @property Grid\Column|Collection company_address
-     * @property Grid\Column|Collection currency
      * @property Grid\Column|Collection customer_id
-     * @property Grid\Column|Collection deleted_at
      * @property Grid\Column|Collection email
      * @property Grid\Column|Collection fax
      * @property Grid\Column|Collection is_default
@@ -51,9 +79,7 @@ namespace Dcat\Admin {
      * @property Grid\Column|Collection address
      * @property Grid\Column|Collection category
      * @property Grid\Column|Collection grade
-     * @property Grid\Column|Collection merchandiser_id
      * @property Grid\Column|Collection payment_method
-     * @property Grid\Column|Collection remarks
      * @property Grid\Column|Collection salesman_id
      * @property Grid\Column|Collection connection
      * @property Grid\Column|Collection exception
@@ -61,12 +87,7 @@ namespace Dcat\Admin {
      * @property Grid\Column|Collection payload
      * @property Grid\Column|Collection queue
      * @property Grid\Column|Collection uuid
-     * @property Grid\Column|Collection manufacturer_id
-     * @property Grid\Column|Collection no
-     * @property Grid\Column|Collection purchaser_id
-     * @property Grid\Column|Collection spec
      * @property Grid\Column|Collection unit
-     * @property Grid\Column|Collection unit_price
      * @property Grid\Column|Collection brand
      * @property Grid\Column|Collection cbm_box
      * @property Grid\Column|Collection commission
@@ -96,33 +117,25 @@ namespace Dcat\Admin {
      * @property Grid\Column|Collection packing_method
      * @property Grid\Column|Collection place_of_delivery
      * @property Grid\Column|Collection po_no
-     * @property Grid\Column|Collection price_excluding_tax
      * @property Grid\Column|Collection product_cbm
      * @property Grid\Column|Collection product_factory_price
      * @property Grid\Column|Collection profit_margin
-     * @property Grid\Column|Collection quantity
      * @property Grid\Column|Collection quotation_benchmark
      * @property Grid\Column|Collection quote_unit
      * @property Grid\Column|Collection sea_freight
-     * @property Grid\Column|Collection tax_rate
      * @property Grid\Column|Collection tax_rebate_rate
      * @property Grid\Column|Collection unit_of_weight
      * @property Grid\Column|Collection weight
+     * @property Grid\Column|Collection front
+     * @property Grid\Column|Collection inner_box
+     * @property Grid\Column|Collection side
      * @property Grid\Column|Collection rate
-     * @property Grid\Column|Collection amount
      * @property Grid\Column|Collection actual_total_amount
-     * @property Grid\Column|Collection company
      * @property Grid\Column|Collection customer_contact_id
-     * @property Grid\Column|Collection delivered_at
-     * @property Grid\Column|Collection exchange_rate
      * @property Grid\Column|Collection po
      * @property Grid\Column|Collection pod
      * @property Grid\Column|Collection pol
-     * @property Grid\Column|Collection processing_status
      * @property Grid\Column|Collection rebate
-     * @property Grid\Column|Collection total_amount
-     * @property Grid\Column|Collection valuation_clause
-     * @property Grid\Column|Collection art_no
      * @property Grid\Column|Collection cbm
      * @property Grid\Column|Collection cost_price
      * @property Grid\Column|Collection price_formula
@@ -166,14 +179,42 @@ namespace Dcat\Admin {
      * @method Grid\Column|Collection password(string $label = null)
      * @method Grid\Column|Collection remember_token(string $label = null)
      * @method Grid\Column|Collection username(string $label = null)
+     * @method Grid\Column|Collection amount(string $label = null)
+     * @method Grid\Column|Collection art_no(string $label = null)
+     * @method Grid\Column|Collection contract_id(string $label = null)
+     * @method Grid\Column|Collection deleted_at(string $label = null)
+     * @method Grid\Column|Collection is_tax_included(string $label = null)
+     * @method Grid\Column|Collection no(string $label = null)
+     * @method Grid\Column|Collection price_excluding_tax(string $label = null)
+     * @method Grid\Column|Collection quantity(string $label = null)
+     * @method Grid\Column|Collection remarks(string $label = null)
+     * @method Grid\Column|Collection spec(string $label = null)
+     * @method Grid\Column|Collection tax_rate(string $label = null)
+     * @method Grid\Column|Collection unit_price(string $label = null)
+     * @method Grid\Column|Collection company(string $label = null)
+     * @method Grid\Column|Collection contract_type(string $label = null)
+     * @method Grid\Column|Collection currency(string $label = null)
+     * @method Grid\Column|Collection delivered_at(string $label = null)
+     * @method Grid\Column|Collection exchange_rate(string $label = null)
+     * @method Grid\Column|Collection invoice_type(string $label = null)
+     * @method Grid\Column|Collection manufacturer_contact_id(string $label = null)
+     * @method Grid\Column|Collection manufacturer_id(string $label = null)
+     * @method Grid\Column|Collection merchandiser_id(string $label = null)
+     * @method Grid\Column|Collection order_no(string $label = null)
+     * @method Grid\Column|Collection payment_account(string $label = null)
+     * @method Grid\Column|Collection processing_status(string $label = null)
+     * @method Grid\Column|Collection purchase_method(string $label = null)
+     * @method Grid\Column|Collection purchased_at(string $label = null)
+     * @method Grid\Column|Collection purchaser_id(string $label = null)
+     * @method Grid\Column|Collection purchaser_no(string $label = null)
+     * @method Grid\Column|Collection total_amount(string $label = null)
+     * @method Grid\Column|Collection valuation_clause(string $label = null)
      * @method Grid\Column|Collection account_bank(string $label = null)
      * @method Grid\Column|Collection account_name(string $label = null)
      * @method Grid\Column|Collection account_number(string $label = null)
      * @method Grid\Column|Collection bank_address(string $label = null)
      * @method Grid\Column|Collection company_address(string $label = null)
-     * @method Grid\Column|Collection currency(string $label = null)
      * @method Grid\Column|Collection customer_id(string $label = null)
-     * @method Grid\Column|Collection deleted_at(string $label = null)
      * @method Grid\Column|Collection email(string $label = null)
      * @method Grid\Column|Collection fax(string $label = null)
      * @method Grid\Column|Collection is_default(string $label = null)
@@ -181,9 +222,7 @@ namespace Dcat\Admin {
      * @method Grid\Column|Collection address(string $label = null)
      * @method Grid\Column|Collection category(string $label = null)
      * @method Grid\Column|Collection grade(string $label = null)
-     * @method Grid\Column|Collection merchandiser_id(string $label = null)
      * @method Grid\Column|Collection payment_method(string $label = null)
-     * @method Grid\Column|Collection remarks(string $label = null)
      * @method Grid\Column|Collection salesman_id(string $label = null)
      * @method Grid\Column|Collection connection(string $label = null)
      * @method Grid\Column|Collection exception(string $label = null)
@@ -191,12 +230,7 @@ namespace Dcat\Admin {
      * @method Grid\Column|Collection payload(string $label = null)
      * @method Grid\Column|Collection queue(string $label = null)
      * @method Grid\Column|Collection uuid(string $label = null)
-     * @method Grid\Column|Collection manufacturer_id(string $label = null)
-     * @method Grid\Column|Collection no(string $label = null)
-     * @method Grid\Column|Collection purchaser_id(string $label = null)
-     * @method Grid\Column|Collection spec(string $label = null)
      * @method Grid\Column|Collection unit(string $label = null)
-     * @method Grid\Column|Collection unit_price(string $label = null)
      * @method Grid\Column|Collection brand(string $label = null)
      * @method Grid\Column|Collection cbm_box(string $label = null)
      * @method Grid\Column|Collection commission(string $label = null)
@@ -226,33 +260,25 @@ namespace Dcat\Admin {
      * @method Grid\Column|Collection packing_method(string $label = null)
      * @method Grid\Column|Collection place_of_delivery(string $label = null)
      * @method Grid\Column|Collection po_no(string $label = null)
-     * @method Grid\Column|Collection price_excluding_tax(string $label = null)
      * @method Grid\Column|Collection product_cbm(string $label = null)
      * @method Grid\Column|Collection product_factory_price(string $label = null)
      * @method Grid\Column|Collection profit_margin(string $label = null)
-     * @method Grid\Column|Collection quantity(string $label = null)
      * @method Grid\Column|Collection quotation_benchmark(string $label = null)
      * @method Grid\Column|Collection quote_unit(string $label = null)
      * @method Grid\Column|Collection sea_freight(string $label = null)
-     * @method Grid\Column|Collection tax_rate(string $label = null)
      * @method Grid\Column|Collection tax_rebate_rate(string $label = null)
      * @method Grid\Column|Collection unit_of_weight(string $label = null)
      * @method Grid\Column|Collection weight(string $label = null)
+     * @method Grid\Column|Collection front(string $label = null)
+     * @method Grid\Column|Collection inner_box(string $label = null)
+     * @method Grid\Column|Collection side(string $label = null)
      * @method Grid\Column|Collection rate(string $label = null)
-     * @method Grid\Column|Collection amount(string $label = null)
      * @method Grid\Column|Collection actual_total_amount(string $label = null)
-     * @method Grid\Column|Collection company(string $label = null)
      * @method Grid\Column|Collection customer_contact_id(string $label = null)
-     * @method Grid\Column|Collection delivered_at(string $label = null)
-     * @method Grid\Column|Collection exchange_rate(string $label = null)
      * @method Grid\Column|Collection po(string $label = null)
      * @method Grid\Column|Collection pod(string $label = null)
      * @method Grid\Column|Collection pol(string $label = null)
-     * @method Grid\Column|Collection processing_status(string $label = null)
      * @method Grid\Column|Collection rebate(string $label = null)
-     * @method Grid\Column|Collection total_amount(string $label = null)
-     * @method Grid\Column|Collection valuation_clause(string $label = null)
-     * @method Grid\Column|Collection art_no(string $label = null)
      * @method Grid\Column|Collection cbm(string $label = null)
      * @method Grid\Column|Collection cost_price(string $label = null)
      * @method Grid\Column|Collection price_formula(string $label = null)
@@ -301,14 +327,42 @@ namespace Dcat\Admin {
      * @property Show\Field|Collection password
      * @property Show\Field|Collection remember_token
      * @property Show\Field|Collection username
+     * @property Show\Field|Collection amount
+     * @property Show\Field|Collection art_no
+     * @property Show\Field|Collection contract_id
+     * @property Show\Field|Collection deleted_at
+     * @property Show\Field|Collection is_tax_included
+     * @property Show\Field|Collection no
+     * @property Show\Field|Collection price_excluding_tax
+     * @property Show\Field|Collection quantity
+     * @property Show\Field|Collection remarks
+     * @property Show\Field|Collection spec
+     * @property Show\Field|Collection tax_rate
+     * @property Show\Field|Collection unit_price
+     * @property Show\Field|Collection company
+     * @property Show\Field|Collection contract_type
+     * @property Show\Field|Collection currency
+     * @property Show\Field|Collection delivered_at
+     * @property Show\Field|Collection exchange_rate
+     * @property Show\Field|Collection invoice_type
+     * @property Show\Field|Collection manufacturer_contact_id
+     * @property Show\Field|Collection manufacturer_id
+     * @property Show\Field|Collection merchandiser_id
+     * @property Show\Field|Collection order_no
+     * @property Show\Field|Collection payment_account
+     * @property Show\Field|Collection processing_status
+     * @property Show\Field|Collection purchase_method
+     * @property Show\Field|Collection purchased_at
+     * @property Show\Field|Collection purchaser_id
+     * @property Show\Field|Collection purchaser_no
+     * @property Show\Field|Collection total_amount
+     * @property Show\Field|Collection valuation_clause
      * @property Show\Field|Collection account_bank
      * @property Show\Field|Collection account_name
      * @property Show\Field|Collection account_number
      * @property Show\Field|Collection bank_address
      * @property Show\Field|Collection company_address
-     * @property Show\Field|Collection currency
      * @property Show\Field|Collection customer_id
-     * @property Show\Field|Collection deleted_at
      * @property Show\Field|Collection email
      * @property Show\Field|Collection fax
      * @property Show\Field|Collection is_default
@@ -316,9 +370,7 @@ namespace Dcat\Admin {
      * @property Show\Field|Collection address
      * @property Show\Field|Collection category
      * @property Show\Field|Collection grade
-     * @property Show\Field|Collection merchandiser_id
      * @property Show\Field|Collection payment_method
-     * @property Show\Field|Collection remarks
      * @property Show\Field|Collection salesman_id
      * @property Show\Field|Collection connection
      * @property Show\Field|Collection exception
@@ -326,12 +378,7 @@ namespace Dcat\Admin {
      * @property Show\Field|Collection payload
      * @property Show\Field|Collection queue
      * @property Show\Field|Collection uuid
-     * @property Show\Field|Collection manufacturer_id
-     * @property Show\Field|Collection no
-     * @property Show\Field|Collection purchaser_id
-     * @property Show\Field|Collection spec
      * @property Show\Field|Collection unit
-     * @property Show\Field|Collection unit_price
      * @property Show\Field|Collection brand
      * @property Show\Field|Collection cbm_box
      * @property Show\Field|Collection commission
@@ -361,33 +408,25 @@ namespace Dcat\Admin {
      * @property Show\Field|Collection packing_method
      * @property Show\Field|Collection place_of_delivery
      * @property Show\Field|Collection po_no
-     * @property Show\Field|Collection price_excluding_tax
      * @property Show\Field|Collection product_cbm
      * @property Show\Field|Collection product_factory_price
      * @property Show\Field|Collection profit_margin
-     * @property Show\Field|Collection quantity
      * @property Show\Field|Collection quotation_benchmark
      * @property Show\Field|Collection quote_unit
      * @property Show\Field|Collection sea_freight
-     * @property Show\Field|Collection tax_rate
      * @property Show\Field|Collection tax_rebate_rate
      * @property Show\Field|Collection unit_of_weight
      * @property Show\Field|Collection weight
+     * @property Show\Field|Collection front
+     * @property Show\Field|Collection inner_box
+     * @property Show\Field|Collection side
      * @property Show\Field|Collection rate
-     * @property Show\Field|Collection amount
      * @property Show\Field|Collection actual_total_amount
-     * @property Show\Field|Collection company
      * @property Show\Field|Collection customer_contact_id
-     * @property Show\Field|Collection delivered_at
-     * @property Show\Field|Collection exchange_rate
      * @property Show\Field|Collection po
      * @property Show\Field|Collection pod
      * @property Show\Field|Collection pol
-     * @property Show\Field|Collection processing_status
      * @property Show\Field|Collection rebate
-     * @property Show\Field|Collection total_amount
-     * @property Show\Field|Collection valuation_clause
-     * @property Show\Field|Collection art_no
      * @property Show\Field|Collection cbm
      * @property Show\Field|Collection cost_price
      * @property Show\Field|Collection price_formula
@@ -431,14 +470,42 @@ namespace Dcat\Admin {
      * @method Show\Field|Collection password(string $label = null)
      * @method Show\Field|Collection remember_token(string $label = null)
      * @method Show\Field|Collection username(string $label = null)
+     * @method Show\Field|Collection amount(string $label = null)
+     * @method Show\Field|Collection art_no(string $label = null)
+     * @method Show\Field|Collection contract_id(string $label = null)
+     * @method Show\Field|Collection deleted_at(string $label = null)
+     * @method Show\Field|Collection is_tax_included(string $label = null)
+     * @method Show\Field|Collection no(string $label = null)
+     * @method Show\Field|Collection price_excluding_tax(string $label = null)
+     * @method Show\Field|Collection quantity(string $label = null)
+     * @method Show\Field|Collection remarks(string $label = null)
+     * @method Show\Field|Collection spec(string $label = null)
+     * @method Show\Field|Collection tax_rate(string $label = null)
+     * @method Show\Field|Collection unit_price(string $label = null)
+     * @method Show\Field|Collection company(string $label = null)
+     * @method Show\Field|Collection contract_type(string $label = null)
+     * @method Show\Field|Collection currency(string $label = null)
+     * @method Show\Field|Collection delivered_at(string $label = null)
+     * @method Show\Field|Collection exchange_rate(string $label = null)
+     * @method Show\Field|Collection invoice_type(string $label = null)
+     * @method Show\Field|Collection manufacturer_contact_id(string $label = null)
+     * @method Show\Field|Collection manufacturer_id(string $label = null)
+     * @method Show\Field|Collection merchandiser_id(string $label = null)
+     * @method Show\Field|Collection order_no(string $label = null)
+     * @method Show\Field|Collection payment_account(string $label = null)
+     * @method Show\Field|Collection processing_status(string $label = null)
+     * @method Show\Field|Collection purchase_method(string $label = null)
+     * @method Show\Field|Collection purchased_at(string $label = null)
+     * @method Show\Field|Collection purchaser_id(string $label = null)
+     * @method Show\Field|Collection purchaser_no(string $label = null)
+     * @method Show\Field|Collection total_amount(string $label = null)
+     * @method Show\Field|Collection valuation_clause(string $label = null)
      * @method Show\Field|Collection account_bank(string $label = null)
      * @method Show\Field|Collection account_name(string $label = null)
      * @method Show\Field|Collection account_number(string $label = null)
      * @method Show\Field|Collection bank_address(string $label = null)
      * @method Show\Field|Collection company_address(string $label = null)
-     * @method Show\Field|Collection currency(string $label = null)
      * @method Show\Field|Collection customer_id(string $label = null)
-     * @method Show\Field|Collection deleted_at(string $label = null)
      * @method Show\Field|Collection email(string $label = null)
      * @method Show\Field|Collection fax(string $label = null)
      * @method Show\Field|Collection is_default(string $label = null)
@@ -446,9 +513,7 @@ namespace Dcat\Admin {
      * @method Show\Field|Collection address(string $label = null)
      * @method Show\Field|Collection category(string $label = null)
      * @method Show\Field|Collection grade(string $label = null)
-     * @method Show\Field|Collection merchandiser_id(string $label = null)
      * @method Show\Field|Collection payment_method(string $label = null)
-     * @method Show\Field|Collection remarks(string $label = null)
      * @method Show\Field|Collection salesman_id(string $label = null)
      * @method Show\Field|Collection connection(string $label = null)
      * @method Show\Field|Collection exception(string $label = null)
@@ -456,12 +521,7 @@ namespace Dcat\Admin {
      * @method Show\Field|Collection payload(string $label = null)
      * @method Show\Field|Collection queue(string $label = null)
      * @method Show\Field|Collection uuid(string $label = null)
-     * @method Show\Field|Collection manufacturer_id(string $label = null)
-     * @method Show\Field|Collection no(string $label = null)
-     * @method Show\Field|Collection purchaser_id(string $label = null)
-     * @method Show\Field|Collection spec(string $label = null)
      * @method Show\Field|Collection unit(string $label = null)
-     * @method Show\Field|Collection unit_price(string $label = null)
      * @method Show\Field|Collection brand(string $label = null)
      * @method Show\Field|Collection cbm_box(string $label = null)
      * @method Show\Field|Collection commission(string $label = null)
@@ -491,33 +551,25 @@ namespace Dcat\Admin {
      * @method Show\Field|Collection packing_method(string $label = null)
      * @method Show\Field|Collection place_of_delivery(string $label = null)
      * @method Show\Field|Collection po_no(string $label = null)
-     * @method Show\Field|Collection price_excluding_tax(string $label = null)
      * @method Show\Field|Collection product_cbm(string $label = null)
      * @method Show\Field|Collection product_factory_price(string $label = null)
      * @method Show\Field|Collection profit_margin(string $label = null)
-     * @method Show\Field|Collection quantity(string $label = null)
      * @method Show\Field|Collection quotation_benchmark(string $label = null)
      * @method Show\Field|Collection quote_unit(string $label = null)
      * @method Show\Field|Collection sea_freight(string $label = null)
-     * @method Show\Field|Collection tax_rate(string $label = null)
      * @method Show\Field|Collection tax_rebate_rate(string $label = null)
      * @method Show\Field|Collection unit_of_weight(string $label = null)
      * @method Show\Field|Collection weight(string $label = null)
+     * @method Show\Field|Collection front(string $label = null)
+     * @method Show\Field|Collection inner_box(string $label = null)
+     * @method Show\Field|Collection side(string $label = null)
      * @method Show\Field|Collection rate(string $label = null)
-     * @method Show\Field|Collection amount(string $label = null)
      * @method Show\Field|Collection actual_total_amount(string $label = null)
-     * @method Show\Field|Collection company(string $label = null)
      * @method Show\Field|Collection customer_contact_id(string $label = null)
-     * @method Show\Field|Collection delivered_at(string $label = null)
-     * @method Show\Field|Collection exchange_rate(string $label = null)
      * @method Show\Field|Collection po(string $label = null)
      * @method Show\Field|Collection pod(string $label = null)
      * @method Show\Field|Collection pol(string $label = null)
-     * @method Show\Field|Collection processing_status(string $label = null)
      * @method Show\Field|Collection rebate(string $label = null)
-     * @method Show\Field|Collection total_amount(string $label = null)
-     * @method Show\Field|Collection valuation_clause(string $label = null)
-     * @method Show\Field|Collection art_no(string $label = null)
      * @method Show\Field|Collection cbm(string $label = null)
      * @method Show\Field|Collection cost_price(string $label = null)
      * @method Show\Field|Collection price_formula(string $label = null)
