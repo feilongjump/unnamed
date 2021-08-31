@@ -21,6 +21,7 @@ Route::group([
     $router->resource('quotes', 'QuotesController');
     $router->resource('orders', 'OrdersController');
     $router->resource('contracts', 'ContractsController');
+    $router->resource('enquiries', 'EnquiriesController');
 
     /**
      * API
