@@ -127,7 +127,18 @@ class CustomersController extends AdminController
             $form->text('telephone')->required();
             $form->email('email')->required();
             $form->text('fax')->required();
-            $form->switch('is_default')->default(false);
+            $form->switch('is_default')->default(false)->rules(function (Form $form) {
+
+                $quantity = collect($form->contacts)
+                    ->pluck('is_default')
+                    ->filter(function ($value, $key) {
+                        return $value > 0;
+                    })
+                    ->count();
+                if ($quantity > 1) {
+                    $form->responseValidationMessages('is_default', '请勿设置多个默认联系人');
+                }
+            });
         })->useTable()->width(12);
     }
 

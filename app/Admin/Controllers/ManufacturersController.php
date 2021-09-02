@@ -16,20 +16,27 @@ class ManufacturersController extends AdminController
      */
     protected function grid(): Grid
     {
-        return Grid::make(new Manufacturer(), function (Grid $grid) {
+        return Grid::make(Manufacturer::with(['defaultContact']), function (Grid $grid) {
             $grid->column('id')->sortable();
             $grid->column('no');
             $grid->column('name');
-            $grid->column('category');
-            $grid->column('purchaser');
+            $grid->column('purchaser_id');
+
+            $grid->column('defaultContact.name');
+            $grid->column('defaultContact.telephone');
+            $grid->column('defaultContact.email');
+            $grid->column('defaultContact.fax');
+
             $grid->column('address');
-            $grid->column('remarks');
-            $grid->column('created_at');
-            $grid->column('updated_at')->sortable();
+            $grid->column('created_at')->sortable();
 
             $grid->filter(function (Grid\Filter $filter) {
-                $filter->equal('id');
+                $filter->like('no')->width(3);
+                $filter->like('name')->width(3);
+                $filter->equal('purchaser_id')->select([1 => '小菜鸟'])->width(3);
+                $filter->equal('category')->select([1 => '测试分类'])->width(3);
 
+                $filter->between('created_at')->datetime()->width(5);
             });
         });
     }
@@ -95,7 +102,7 @@ class ManufacturersController extends AdminController
         $form->select('category')
             ->options([1 => '测试分类'])
             ->required();
-        $form->select('purchaser')
+        $form->select('purchaser_id')
             ->options([1 => '小菜鸟'])
             ->required();
         $form->text('address')->required();
@@ -119,7 +126,18 @@ class ManufacturersController extends AdminController
             $form->text('telephone')->required();
             $form->email('email')->required();
             $form->text('fax')->required();
-            $form->switch('is_default')->default(false);
+            $form->switch('is_default')->default(false)->rules(function (Form $form) {
+
+                $quantity = collect($form->contacts)
+                    ->pluck('is_default')
+                    ->filter(function ($value, $key) {
+                        return $value > 0;
+                    })
+                    ->count();
+                if ($quantity > 1) {
+                    $form->responseValidationMessages('is_default', '请勿设置多个默认联系人');
+                }
+            });
         })->useTable()->width(12);
     }
 

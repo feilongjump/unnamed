@@ -13,7 +13,7 @@ class Customer extends Model
      */
     public function contacts(): HasMany
     {
-        return $this->hasMany(CustomerContact::class, 'customer_id');
+        return $this->hasMany(CustomerContact::class);
     }
 
     /**
@@ -23,6 +23,6 @@ class Customer extends Model
      */
     public function banks(): HasMany
     {
-        return $this->hasMany(CustomerBank::class, 'customer_id');
+        return $this->hasMany(CustomerBank::class);
     }
 }

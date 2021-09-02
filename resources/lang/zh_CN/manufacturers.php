@@ -8,9 +8,10 @@ return [
         'no'        => '厂家编号',
         'name'      => '厂家名称',
         'category'  => '厂家分类',
-        'purchaser' => '采购负责人',
+        'purchaser_id' => '采购负责人',
         'address'   => '厂家地址',
         'remarks'   => '备注',
+        'created_at'   => '录入时间',
         'contacts'  => [
             'manufacturer_id' => 'manufacturer_id',
             'name'            => '姓名',

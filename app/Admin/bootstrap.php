@@ -1,10 +1,7 @@
 <?php
 
-use Dcat\Admin\Admin;
 use Dcat\Admin\Grid;
 use Dcat\Admin\Form;
-use Dcat\Admin\Grid\Filter;
-use Dcat\Admin\Show;
 
 /**
  * Dcat-admin - admin builder based on Laravel.
@@ -27,10 +24,30 @@ use Dcat\Admin\Show;
 
 Grid::resolving(function (Grid $grid) {
     // 表格分隔展示方式
-    $grid->tableCollapse(false);
+    // $grid->tableCollapse(false);
+
+    // 边框模式
+    $grid->withBorder();
+
+    // 开启字段选择器功能
+    $grid->showColumnSelector();
+
+    // 显示横向滚动条
+    $grid->scrollbarX();
 
     // 关闭表格行显示按钮
     $grid->disableViewButton();
+
+    // 禁用过滤器按钮
+    $grid->disableFilterButton();
+
+    $grid->filter(function (Grid\Filter $filter) {
+        // 展开过滤器
+        $filter->expand();
+
+        // 过滤器布局模式 - panel 布局
+        $filter->panel();
+    });
 });
 
 Form::resolving(function (Form $form) {

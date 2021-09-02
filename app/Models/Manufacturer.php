@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Manufacturer extends Model
@@ -13,7 +14,12 @@ class Manufacturer extends Model
      */
     public function contacts(): HasMany
     {
-        return $this->hasMany(ManufacturerContact::class, 'manufacturer_id');
+        return $this->hasMany(ManufacturerContact::class);
+    }
+
+    public function defaultContact(): HasOne
+    {
+        return $this->hasOne(ManufacturerContact::class)->where('is_default', true);
     }
 
     /**
@@ -23,6 +29,6 @@ class Manufacturer extends Model
      */
     public function banks(): HasMany
     {
-        return $this->hasMany(ManufacturerBank::class, 'manufacturer_id');
+        return $this->hasMany(ManufacturerBank::class);
     }
 }
