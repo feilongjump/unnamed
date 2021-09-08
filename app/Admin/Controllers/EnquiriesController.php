@@ -16,23 +16,26 @@ class EnquiriesController extends AdminController
      */
     protected function grid(): Grid
     {
-        return Grid::make(new Enquiry(), function (Grid $grid) {
+        return Grid::make(Enquiry::with(['manufacturer', 'manufacturer_contact']), function (Grid $grid) {
             $grid->column('id')->sortable();
-            $grid->column('manufacturer_id');
-            $grid->column('manufacturer_contact_id');
+            $grid->column('manufacturer.name');
+            $grid->column('manufacturer_contact.name');
+            $grid->column('manufacturer_contact.telephone');
             $grid->column('art_no');
             $grid->column('standard');
             $grid->column('pack');
             $grid->column('moq');
             $grid->column('price');
-            $grid->column('delivered_at');
-            $grid->column('website');
-            $grid->column('created_at');
-            $grid->column('updated_at')->sortable();
+            $grid->column('website')->link()->width('100px');
+            $grid->column('delivered_at')->sortable();
+            $grid->column('created_at')->sortable();
 
             $grid->filter(function (Grid\Filter $filter) {
-                $filter->equal('id');
+                $filter->like('art_no')->width(4);
+                $filter->like('manufacturer.name')->width(4);
+                $filter->like('price')->width(4);
 
+                $filter->between('created_at')->datetime()->width(4);
             });
         });
     }
