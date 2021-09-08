@@ -16,30 +16,24 @@ class ShowpiecesController extends AdminController
      */
     protected function grid(): Grid
     {
-        return Grid::make(new Showpiece(), function (Grid $grid) {
+        return Grid::make(Showpiece::with('manufacturer'), function (Grid $grid) {
             $grid->column('id')->sortable();
-            $grid->column('manufacturer_id');
-            $grid->column('mo');
+            $grid->column('manufacturer.name');
             $grid->column('no');
             $grid->column('name');
             $grid->column('english_name');
             $grid->column('spec');
-            $grid->column('series');
             $grid->column('material');
-            $grid->column('unit_price');
-            $grid->column('producer');
-            $grid->column('quoted_price');
-            $grid->column('describe');
-            $grid->column('english_describe');
-            $grid->column('pack_describe');
-            $grid->column('english_pack_describe');
-            $grid->column('remarks');
-            $grid->column('created_at');
-            $grid->column('updated_at')->sortable();
+            $grid->column('remarks')->limit(30)->width('300px');
+            $grid->column('created_at')->sortable();
 
             $grid->filter(function (Grid\Filter $filter) {
-                $filter->equal('id');
+                $filter->like('no')->width(3);
+                $filter->like('name')->width(3);
+                $filter->like('spec')->width(3);
+                $filter->equal('category')->select([1 => '测试分类'])->width(3);
 
+                $filter->between('created_at')->datetime()->width(4);
             });
         });
     }

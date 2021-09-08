@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Showpiece extends Model
@@ -35,5 +36,15 @@ class Showpiece extends Model
     {
         return $this->hasMany(Picture::class, 'relevance_id')
             ->where('type', Picture::SHOWPIECE);
+    }
+
+    /**
+     * 厂家
+     *
+     * @return BelongsTo
+     */
+    public function manufacturer(): BelongsTo
+    {
+        return $this->belongsTo(Manufacturer::class);
     }
 }
