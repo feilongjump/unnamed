@@ -17,26 +17,34 @@ class ContractsController extends AdminController
      */
     protected function grid(): Grid
     {
-        return Grid::make(new Contract(), function (Grid $grid) {
+        return Grid::make(Contract::with(['manufacturer', 'manufacturer_contact']), function (Grid $grid) {
             $grid->column('id')->sortable();
-            $grid->column('manufacturer_id');
-            $grid->column('manufacturer_contact_id');
-            $grid->column('company');
+            $grid->column('manufacturer.name');
+            $grid->column('manufacturer_contact.name');
+            $grid->column('contract_type');
             $grid->column('merchandiser_id');
             $grid->column('purchaser_id');
             $grid->column('purchaser_no');
+            $grid->column('purchase_method');
             $grid->column('currency');
             $grid->column('total_amount');
             $grid->column('valuation_clause');
-            $grid->column('processing_status');
-            $grid->column('remarks');
-            $grid->column('delivered_at');
-            $grid->column('created_at');
-            $grid->column('updated_at')->sortable();
+            $grid->column('processing_status')
+                ->filter(
+                    Grid\Column\Filter\In::make(Contract::$processingStatusMap)
+                )
+                ->display(function ($processing_status) {
+                    return Contract::$processingStatusMap[$processing_status];
+                })
+                ->label();
+            $grid->column('delivered_at')->sortable();
+            $grid->column('created_at')->sortable();
 
             $grid->filter(function (Grid\Filter $filter) {
-                $filter->equal('id');
+                $filter->like('purchaser_no')->width(3);
+                $filter->like('manufacturer.name')->width(3);
 
+                $filter->between('created_at')->datetime()->width(4);
             });
         });
     }
