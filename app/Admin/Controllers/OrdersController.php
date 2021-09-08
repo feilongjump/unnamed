@@ -19,36 +19,33 @@ class OrdersController extends AdminController
      */
     protected function grid(): Grid
     {
-        return Grid::make(new Order(), function (Grid $grid) {
+        return Grid::make(Order::with(['customer', 'customer_contact']), function (Grid $grid) {
             $grid->column('id')->sortable();
-            $grid->column('customer_id');
-            $grid->column('customer_contact_id');
-            $grid->column('company');
+            $grid->column('customer.name');
+            $grid->column('customer_contact.name');
             $grid->column('salesman_id');
-            $grid->column('merchandiser_id');
-            $grid->column('purchaser_id');
             $grid->column('no');
             $grid->column('po');
-            $grid->column('currency');
-            $grid->column('exchange_rate');
             $grid->column('commission');
-            $grid->column('rebate');
-            $grid->column('sea_freight');
-            $grid->column('profit_margin');
-            $grid->column('total_amount');
             $grid->column('actual_total_amount');
-            $grid->column('pol');
-            $grid->column('pod');
             $grid->column('valuation_clause');
-            $grid->column('processing_status');
-            $grid->column('remarks');
-            $grid->column('delivered_at');
-            $grid->column('created_at');
-            $grid->column('updated_at')->sortable();
+            $grid->column('processing_status')
+                ->filter(
+                    Grid\Column\Filter\In::make(Order::$processingStatusMap)
+                )
+                ->display(function ($processing_status) {
+                    return Order::$processingStatusMap[$processing_status];
+                })
+                ->label();
+            $grid->column('delivered_at')->sortable();
+            $grid->column('created_at')->sortable();
 
             $grid->filter(function (Grid\Filter $filter) {
-                $filter->equal('id');
+                $filter->like('no')->width(4);
+                $filter->like('customer.name')->width(4);
+                $filter->equal('salesman_id')->select([1 => '小菜鸟'])->width(4);
 
+                $filter->between('delivered_at')->datetime()->width(4);
             });
         });
     }
