@@ -16,23 +16,36 @@ class CustomersController extends AdminController
      */
     protected function grid(): Grid
     {
-        return Grid::make(new Customer(), function (Grid $grid) {
+        return Grid::make(Customer::with(['defaultContact']), function (Grid $grid) {
             $grid->column('id')->sortable();
             $grid->column('name');
             $grid->column('category');
             $grid->column('salesman_id');
             $grid->column('merchandiser_id');
-            $grid->column('grade');
+            $grid->column('grade')->sortable()->filter(
+                Grid\Column\Filter\In::make([
+                    '1' => '⭐',
+                    '2' => '⭐⭐',
+                    '3' => '⭐⭐⭐',
+                    '4' => '⭐⭐⭐⭐',
+                    '5' => '⭐⭐⭐⭐⭐',
+                ])
+            );
             $grid->column('currency');
             $grid->column('payment_method');
-            $grid->column('address');
-            $grid->column('remarks');
-            $grid->column('created_at');
-            $grid->column('updated_at')->sortable();
+
+            $grid->column('defaultContact.name');
+            $grid->column('defaultContact.telephone');
+            $grid->column('defaultContact.email');
+            $grid->column('defaultContact.fax');
+
+            $grid->column('created_at')->sortable();
 
             $grid->filter(function (Grid\Filter $filter) {
-                $filter->equal('id');
+                $filter->like('name')->width(3);
+                $filter->equal('salesman_id')->select([1 => '小菜鸟'])->width(3);
 
+                $filter->between('created_at')->datetime()->width(4);
             });
         });
     }
