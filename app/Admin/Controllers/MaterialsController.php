@@ -16,22 +16,23 @@ class MaterialsController extends AdminController
      */
     protected function grid(): Grid
     {
-        return Grid::make(new Material(), function (Grid $grid) {
+        return Grid::make(Material::with('manufacturer'), function (Grid $grid) {
             $grid->column('id')->sortable();
-            $grid->column('manufacturer_id');
+            $grid->column('manufacturer.name');
             $grid->column('no');
             $grid->column('name');
             $grid->column('spec');
             $grid->column('category');
             $grid->column('unit');
             $grid->column('unit_price');
-            $grid->column('remarks');
-            $grid->column('created_at');
-            $grid->column('updated_at')->sortable();
+            $grid->column('remarks')->limit(30)->width('300px');
+            $grid->column('created_at')->sortable();
 
             $grid->filter(function (Grid\Filter $filter) {
-                $filter->equal('id');
+                $filter->like('no')->width(3);
+                $filter->equal('category')->select([1 => '测试分类'])->width(3);
 
+                $filter->between('created_at')->datetime()->width(4);
             });
         });
     }
