@@ -3,7 +3,7 @@
 }
 
 .sidebar-nav {
-  @apply h-16 border-b flex justify-center items-center;
+  @apply h-20 border-b flex justify-center items-center;
 }
 
 .sidebar-menu-container {

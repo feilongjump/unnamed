@@ -1,3 +1,15 @@
 .navbar-container {
-  @apply w-full h-16 bg-white px-12 border-b flex items-center;
+  @apply w-full h-20 bg-white px-12 border-b flex justify-between items-center;
+}
+
+.nav-right {
+  @apply flex items-center;
+}
+
+.nav-right .keywords-input .el-input {
+  @apply w-56;
+}
+
+.nav-right .keywords-input .el-input .el-input__wrapper {
+  @apply rounded-full;
 }
