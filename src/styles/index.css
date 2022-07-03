@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 #app {
-  @apply font-sans antialiased tracking-wider;
+  @apply font-sans antialiased;
 }
