@@ -1,0 +1,15 @@
+.sidebar-container {
+  @apply w-64 h-screen bg-white fixed border-r;
+}
+
+.sidebar-nav {
+  @apply h-16 border-b flex justify-center items-center;
+}
+
+.sidebar-menu-container {
+  @apply h-full;
+}
+
+.sidebar-menu-container .el-menu {
+  @apply border-r-0;
+}
