@@ -13,17 +13,19 @@ specifiers:
   eslint-plugin-import: ^2.26.0
   eslint-plugin-prettier: ^4.2.1
   eslint-plugin-vue: ^9.1.1
-  husky: ^8.0.1
+  husky: ^8.0.0
   lint-staged: ^13.0.3
   prettier: ^2.7.1
   typescript: ^4.7.4
   vite: ^2.9.13
   vue: ^3.2.37
+  vue-router: ^4.0.16
   vue-tsc: ^0.38.2
 
 dependencies:
   element-plus: 2.2.8_vue@3.2.37
   vue: 3.2.37
+  vue-router: 4.0.16_vue@3.2.37
 
 devDependencies:
   '@types/node': 18.0.0
@@ -370,6 +372,10 @@ packages:
     dependencies:
       '@vue/compiler-dom': 3.2.37
       '@vue/shared': 3.2.37
+
+  /@vue/devtools-api/6.2.0:
+    resolution: {integrity: sha512-pF1G4wky+hkifDiZSWn8xfuLOJI1ZXtuambpBEYaf7Xaf6zC/pM29rvAGpd3qaGXnr4BAXU1Pxz/VfvBGwexGA==}
+    dev: false
 
   /@vue/reactivity-transform/3.2.37:
     resolution: {integrity: sha512-IWopkKEb+8qpu/1eMKVeXrK0NLw9HicGviJzhJDEyfxTR9e1WtpnnbYkJWurX6WwoFP0sz10xQg8yL8lgskAZg==}
@@ -2445,6 +2451,15 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
+
+  /vue-router/4.0.16_vue@3.2.37:
+    resolution: {integrity: sha512-JcO7cb8QJLBWE+DfxGUL3xUDOae/8nhM1KVdnudadTAORbuxIC/xAydC5Zr/VLHUDQi1ppuTF5/rjBGzgzrJNA==}
+    peerDependencies:
+      vue: ^3.2.0
+    dependencies:
+      '@vue/devtools-api': 6.2.0
+      vue: 3.2.37
+    dev: false
 
   /vue-tsc/0.38.2_typescript@4.7.4:
     resolution: {integrity: sha512-+OMmpw9BZC9khul3I1HGtWchv7BCiaM7NvfdilVAiOFkjnivIoaW6jJm6YPQJaEPouePtpkDUWovyzgNxWdDsw==}

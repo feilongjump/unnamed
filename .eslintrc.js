@@ -24,5 +24,13 @@ module.exports = {
     'vue/multi-word-component-names': 'off',
     'no-param-reassign': 'off',
     'class-methods-use-this': 'off'
+  },
+  settings: {
+    'import/resolver': {
+      alias: {
+        map: [['@', './src']],
+        extensions: ['.js', '.ts', '.vue']
+      }
+    }
   }
 }
