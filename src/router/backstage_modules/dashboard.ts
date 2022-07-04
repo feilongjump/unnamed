@@ -8,7 +8,8 @@ const dashboardRoute: Array<RouteRecordRaw> = [
     component: () => import('@/views/backstage/dashboard/index.vue'),
     meta: {
       title: 'Dashboard',
-      icon: HomeIcon
+      icon: HomeIcon,
+      activeMenu: 'backstage/dashboard'
     }
   }
 ]

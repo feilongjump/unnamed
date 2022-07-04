@@ -2,13 +2,17 @@
   <template v-if="!item.meta?.hidden">
     <el-menu-item
       v-if="hasOneShowingChild(item, item.children) && onlyOneChild?.noShowingChildren"
-      :index="item.path"
+      :index="resolvePath(item.path)"
     >
-      <template #title>{{ item.meta?.title }}</template>
+      <template #title>
+        <component :is="item.meta?.icon" class="h-5 w-5 mr-2 stroke-2"></component>
+        {{ item.meta?.title }}
+      </template>
     </el-menu-item>
 
-    <el-sub-menu v-else :index="item.path">
+    <el-sub-menu v-else :index="resolvePath(item.path)">
       <template #title>
+        <component :is="item.meta?.icon" class="h-5 w-5 mr-2 stroke-2"></component>
         <span>{{ item.meta?.title }}</span>
       </template>
 
@@ -16,7 +20,7 @@
         v-for="children in item.children"
         :key="children.path"
         :item="children"
-        :base-path="item.path"
+        :base-path="resolvePath(item.path)"
       />
     </el-sub-menu>
   </template>
@@ -28,10 +32,10 @@ import { RouteRecordRaw } from 'vue-router'
 
 interface Props {
   item: RouteRecordRaw
-  basePath: string
+  basePath?: string
 }
-withDefaults(defineProps<Props>(), {
-  basePath: '/'
+const props = withDefaults(defineProps<Props>(), {
+  basePath: '/backstage'
 })
 
 interface Child {
@@ -71,5 +75,13 @@ const hasOneShowingChild = (parent: RouteRecordRaw, children: Array<RouteRecordR
   }
 
   return false
+}
+
+const resolvePath = (routePath: string) => {
+  if (props.basePath !== '/') {
+    return `${props.basePath}/${routePath}`
+  }
+
+  return props.basePath + routePath
 }
 </script>

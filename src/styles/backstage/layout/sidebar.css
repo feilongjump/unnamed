@@ -13,3 +13,12 @@
 .sidebar-menu-container .el-menu {
   @apply border-r-0;
 }
+
+.el-menu .el-menu-item,
+.el-menu .el-sub-menu__title {
+  @apply text-gray-500
+}
+
+.el-menu .is-active .el-sub-menu__title {
+  @apply text-black;
+}
