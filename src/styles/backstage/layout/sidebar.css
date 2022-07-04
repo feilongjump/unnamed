@@ -7,7 +7,7 @@
 }
 
 .sidebar-menu-container {
-  @apply h-full;
+  height: calc(theme('height.full') - theme('height.20'))
 }
 
 .sidebar-menu-container .el-menu {

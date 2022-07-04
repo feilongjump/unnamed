@@ -1,5 +1,6 @@
 import { RouteRecordRaw } from 'vue-router'
 import Layout from '@/layout/index.vue'
+import backstageModuleRoutes from './backstage_modules'
 
 const backstageRouter: Array<RouteRecordRaw> = [
   {
@@ -7,13 +8,7 @@ const backstageRouter: Array<RouteRecordRaw> = [
     name: 'Backstage',
     redirect: { name: 'Backstage.Dashboard' },
     component: Layout,
-    children: [
-      {
-        path: 'dashboard',
-        name: 'Backstage.Dashboard',
-        component: () => import('@/views/backstage/dashboard/index.vue')
-      }
-    ]
+    children: backstageModuleRoutes
   }
 ]
 
