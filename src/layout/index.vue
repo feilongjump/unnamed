@@ -7,6 +7,7 @@
         <Navbar />
 
         <div class="main-container">
+          <Breadcrumb />
           <router-view />
         </div>
       </el-scrollbar>
@@ -17,6 +18,7 @@
 <script setup lang="ts">
 import Sidebar from './components/Sidebar/Index.vue'
 import Navbar from './components/Navbar.vue'
+import Breadcrumb from './components/Breadcrumb.vue'
 </script>
 
 <style scoped>

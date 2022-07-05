@@ -8,5 +8,5 @@
 }
 
 .main-container {
-  @apply px-12;
+  @apply px-12 py-10;
 }
