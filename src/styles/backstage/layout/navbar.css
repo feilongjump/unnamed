@@ -9,7 +9,3 @@
 .nav-right .keywords-input .el-input {
   @apply w-56;
 }
-
-.nav-right .keywords-input .el-input .el-input__wrapper {
-  @apply rounded-full;
-}

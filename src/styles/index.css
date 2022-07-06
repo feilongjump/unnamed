@@ -5,3 +5,19 @@
 #app {
   @apply font-sans antialiased;
 }
+
+.table-header {
+  @apply bg-slate-100 border-t px-3 !important;
+}
+.table-cell {
+  @apply px-3 !important;
+}
+.el-pagination.is-background .btn-next,
+.el-pagination.is-background .btn-prev,
+.el-pagination.is-background .el-pager li:not(.is-active) {
+  @apply bg-transparent !important;
+}
+
+.el-input.rounded-full-input .el-input__wrapper {
+  @apply rounded-full;
+}

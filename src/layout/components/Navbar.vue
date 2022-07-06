@@ -5,7 +5,12 @@
     </div>
     <div class="nav-right">
       <div class="keywords-input mr-6">
-        <el-input v-model="keywords" placeholder="Search..." :prefix-icon="SearchIcon" />
+        <el-input
+          v-model="keywords"
+          class="rounded-full-input"
+          placeholder="Search..."
+          :prefix-icon="SearchIcon"
+        />
       </div>
       <BellIcon class="h-6 w-6 stroke-blue-400 mr-6 cursor-pointer" />
       <ChatIcon class="h-6 w-6 stroke-indigo-400 mr-6 cursor-pointer" />
